@@ -1,0 +1,670 @@
+W1031 15:42:26.595006 365 datasets.py:218] type: train ... no label for BAC009S0135W0193
+W1031 15:42:26.596845 365 datasets.py:218] type: train ... no label for BAC009S0074W0226
+W1031 15:42:26.598557 365 datasets.py:218] type: train ... no label for BAC009S0353W0453
+W1031 15:42:26.610080 365 datasets.py:218] type: train ... no label for BAC009S0707W0469
+W1031 15:42:26.611396 365 datasets.py:218] type: train ... no label for BAC009S0128W0309
+W1031 15:42:26.611745 365 datasets.py:218] type: train ... no label for BAC009S0128W0123
+W1031 15:42:26.613941 365 datasets.py:218] type: train ... no label for BAC009S0658W0445
+W1031 15:42:26.616359 365 datasets.py:218] type: train ... no label for BAC009S0061W0416
+W1031 15:42:26.620464 365 datasets.py:218] type: train ... no label for BAC009S0079W0156
+W1031 15:42:26.622193 365 datasets.py:218] type: train ... no label for BAC009S0020W0486
+W1031 15:42:26.629472 365 datasets.py:218] type: train ... no label for BAC009S0708W0387
+W1031 15:42:26.629730 365 datasets.py:218] type: train ... no label for BAC009S0708W0418
+W1031 15:42:26.629808 365 datasets.py:218] type: train ... no label for BAC009S0708W0399
+W1031 15:42:26.633435 365 datasets.py:218] type: train ... no label for BAC009S0350W0457
+W1031 15:42:26.637124 365 datasets.py:218] type: train ... no label for BAC009S0145W0450
+W1031 15:42:26.640865 365 datasets.py:218] type: train ... no label for BAC009S0162W0344
+W1031 15:42:26.642483 365 datasets.py:218] type: train ... no label for BAC009S0250W0175
+W1031 15:42:26.645957 365 datasets.py:218] type: train ... no label for BAC009S0072W0423
+W1031 15:42:26.646646 365 datasets.py:218] type: train ... no label for BAC009S0072W0416
+W1031 15:42:26.648666 365 datasets.py:218] type: train ... no label for BAC009S0232W0299
+W1031 15:42:26.650439 365 datasets.py:218] type: train ... no label for BAC009S0105W0335
+W1031 15:42:26.652844 365 datasets.py:218] type: train ... no label for BAC009S0112W0136
+W1031 15:42:26.653053 365 datasets.py:218] type: train ... no label for BAC009S0017W0477
+W1031 15:42:26.658779 365 datasets.py:218] type: train ... no label for BAC009S0035W0409
+W1031 15:42:26.664569 365 datasets.py:218] type: train ... no label for BAC009S0211W0416
+W1031 15:42:26.665736 365 datasets.py:218] type: train ... no label for BAC009S0208W0421
+W1031 15:42:26.666378 365 datasets.py:218] type: train ... no label for BAC009S0722W0194
+W1031 15:42:26.666578 365 datasets.py:218] type: train ... no label for BAC009S0722W0178
+W1031 15:42:26.668170 365 datasets.py:218] type: train ... no label for BAC009S0196W0417
+W1031 15:42:26.668303 365 datasets.py:218] type: train ... no label for BAC009S0196W0422
+W1031 15:42:26.668694 365 datasets.py:218] type: train ... no label for BAC009S0196W0430
+W1031 15:42:26.676831 365 datasets.py:218] type: train ... no label for BAC009S0168W0400
+W1031 15:42:26.682122 365 datasets.py:218] type: train ... no label for BAC009S0717W0138
+W1031 15:42:26.683722 365 datasets.py:218] type: train ... no label for BAC009S0185W0419
+W1031 15:42:26.683776 365 datasets.py:218] type: train ... no label for BAC009S0185W0417
+W1031 15:42:26.683884 365 datasets.py:218] type: train ... no label for BAC009S0185W0426
+W1031 15:42:26.684016 365 datasets.py:218] type: train ... no label for BAC009S0185W0408
+W1031 15:42:26.684418 365 datasets.py:218] type: train ... no label for BAC009S0185W0414
+W1031 15:42:26.685927 365 datasets.py:218] type: train ... no label for BAC009S0104W0397
+W1031 15:42:26.689733 365 datasets.py:218] type: train ... no label for BAC009S0349W0227
+W1031 15:42:26.690645 365 datasets.py:218] type: train ... no label for BAC009S0423W0203
+W1031 15:42:26.692782 365 datasets.py:218] type: train ... no label for BAC009S0703W0149
+W1031 15:42:26.698489 365 datasets.py:218] type: train ... no label for BAC009S0188W0418
+W1031 15:42:26.698646 365 datasets.py:218] type: train ... no label for BAC009S0188W0421
+W1031 15:42:26.698715 365 datasets.py:218] type: train ... no label for BAC009S0188W0428
+W1031 15:42:26.698813 365 datasets.py:218] type: train ... no label for BAC009S0188W0412
+W1031 15:42:26.699239 365 datasets.py:218] type: train ... no label for BAC009S0188W0419
+W1031 15:42:26.704468 365 datasets.py:218] type: train ... no label for BAC009S0206W0279
+W1031 15:42:26.705209 365 datasets.py:218] type: train ... no label for BAC009S0206W0461
+W1031 15:42:26.705475 365 datasets.py:218] type: train ... no label for BAC009S0202W0345
+W1031 15:42:26.706866 365 datasets.py:218] type: train ... no label for BAC009S0102W0275
+W1031 15:42:26.710404 365 datasets.py:218] type: train ... no label for BAC009S0155W0352
+W1031 15:42:26.714806 365 datasets.py:218] type: train ... no label for BAC009S0002W0413
+W1031 15:42:26.727453 365 datasets.py:218] type: train ... no label for BAC009S0129W0420
+W1031 15:42:26.730127 365 datasets.py:218] type: train ... no label for BAC009S0657W0187
+W1031 15:42:26.733701 365 datasets.py:218] type: train ... no label for BAC009S0601W0429
+W1031 15:42:26.733750 365 datasets.py:218] type: train ... no label for BAC009S0601W0389
+W1031 15:42:26.733795 365 datasets.py:218] type: train ... no label for BAC009S0601W0462
+W1031 15:42:26.733833 365 datasets.py:218] type: train ... no label for BAC009S0601W0456
+W1031 15:42:26.733876 365 datasets.py:218] type: train ... no label for BAC009S0601W0450
+W1031 15:42:26.733913 365 datasets.py:218] type: train ... no label for BAC009S0601W0381
+W1031 15:42:26.733950 365 datasets.py:218] type: train ... no label for BAC009S0601W0415
+W1031 15:42:26.733998 365 datasets.py:218] type: train ... no label for BAC009S0601W0418
+W1031 15:42:26.734055 365 datasets.py:218] type: train ... no label for BAC009S0601W0351
+W1031 15:42:26.734092 365 datasets.py:218] type: train ... no label for BAC009S0601W0384
+W1031 15:42:26.734132 365 datasets.py:218] type: train ... no label for BAC009S0601W0407
+W1031 15:42:26.734176 365 datasets.py:218] type: train ... no label for BAC009S0601W0432
+W1031 15:42:26.734215 365 datasets.py:218] type: train ... no label for BAC009S0601W0364
+W1031 15:42:26.734252 365 datasets.py:218] type: train ... no label for BAC009S0601W0421
+W1031 15:42:26.734291 365 datasets.py:218] type: train ... no label for BAC009S0601W0379
+W1031 15:42:26.734328 365 datasets.py:218] type: train ... no label for BAC009S0601W0440
+W1031 15:42:26.734374 365 datasets.py:218] type: train ... no label for BAC009S0601W0452
+W1031 15:42:26.734420 365 datasets.py:218] type: train ... no label for BAC009S0601W0455
+W1031 15:42:26.734457 365 datasets.py:218] type: train ... no label for BAC009S0601W0352
+W1031 15:42:26.734497 365 datasets.py:218] type: train ... no label for BAC009S0601W0369
+W1031 15:42:26.734534 365 datasets.py:218] type: train ... no label for BAC009S0601W0451
+W1031 15:42:26.734573 365 datasets.py:218] type: train ... no label for BAC009S0601W0401
+W1031 15:42:26.734610 365 datasets.py:218] type: train ... no label for BAC009S0601W0472
+W1031 15:42:26.734646 365 datasets.py:218] type: train ... no label for BAC009S0601W0445
+W1031 15:42:26.734683 365 datasets.py:218] type: train ... no label for BAC009S0601W0468
+W1031 15:42:26.734719 365 datasets.py:218] type: train ... no label for BAC009S0601W0358
+W1031 15:42:26.734755 365 datasets.py:218] type: train ... no label for BAC009S0601W0449
+W1031 15:42:26.734801 365 datasets.py:218] type: train ... no label for BAC009S0601W0411
+W1031 15:42:26.734838 365 datasets.py:218] type: train ... no label for BAC009S0601W0403
+W1031 15:42:26.734882 365 datasets.py:218] type: train ... no label for BAC009S0601W0465
+W1031 15:42:26.734921 365 datasets.py:218] type: train ... no label for BAC009S0601W0360
+W1031 15:42:26.734960 365 datasets.py:218] type: train ... no label for BAC009S0601W0433
+W1031 15:42:26.734997 365 datasets.py:218] type: train ... no label for BAC009S0601W0493
+W1031 15:42:26.735033 365 datasets.py:218] type: train ... no label for BAC009S0601W0437
+W1031 15:42:26.735072 365 datasets.py:218] type: train ... no label for BAC009S0601W0459
+W1031 15:42:26.735116 365 datasets.py:218] type: train ... no label for BAC009S0601W0454
+W1031 15:42:26.735168 365 datasets.py:218] type: train ... no label for BAC009S0601W0400
+W1031 15:42:26.735205 365 datasets.py:218] type: train ... no label for BAC009S0601W0423
+W1031 15:42:26.735247 365 datasets.py:218] type: train ... no label for BAC009S0601W0431
+W1031 15:42:26.735286 365 datasets.py:218] type: train ... no label for BAC009S0601W0473
+W1031 15:42:26.735323 365 datasets.py:218] type: train ... no label for BAC009S0601W0426
+W1031 15:42:26.735364 365 datasets.py:218] type: train ... no label for BAC009S0601W0361
+W1031 15:42:26.735406 365 datasets.py:218] type: train ... no label for BAC009S0601W0386
+W1031 15:42:26.735442 365 datasets.py:218] type: train ... no label for BAC009S0601W0492
+W1031 15:42:26.735481 365 datasets.py:218] type: train ... no label for BAC009S0601W0424
+W1031 15:42:26.735523 365 datasets.py:218] type: train ... no label for BAC009S0601W0436
+W1031 15:42:26.735562 365 datasets.py:218] type: train ... no label for BAC009S0601W0438
+W1031 15:42:26.735603 365 datasets.py:218] type: train ... no label for BAC009S0601W0380
+W1031 15:42:26.735642 365 datasets.py:218] type: train ... no label for BAC009S0601W0397
+W1031 15:42:26.735682 365 datasets.py:218] type: train ... no label for BAC009S0601W0371
+W1031 15:42:26.735727 365 datasets.py:218] type: train ... no label for BAC009S0601W0442
+W1031 15:42:26.735766 365 datasets.py:218] type: train ... no label for BAC009S0601W0420
+W1031 15:42:26.735808 365 datasets.py:218] type: train ... no label for BAC009S0601W0355
+W1031 15:42:26.735850 365 datasets.py:218] type: train ... no label for BAC009S0601W0425
+W1031 15:42:26.735894 365 datasets.py:218] type: train ... no label for BAC009S0601W0334
+W1031 15:42:26.735931 365 datasets.py:218] type: train ... no label for BAC009S0601W0417
+W1031 15:42:26.735975 365 datasets.py:218] type: train ... no label for BAC009S0601W0485
+W1031 15:42:26.736016 365 datasets.py:218] type: train ... no label for BAC009S0601W0481
+W1031 15:42:26.736055 365 datasets.py:218] type: train ... no label for BAC009S0601W0378
+W1031 15:42:26.736092 365 datasets.py:218] type: train ... no label for BAC009S0601W0399
+W1031 15:42:26.736161 365 datasets.py:218] type: train ... no label for BAC009S0601W0478
+W1031 15:42:26.736203 365 datasets.py:218] type: train ... no label for BAC009S0601W0357
+W1031 15:42:26.736242 365 datasets.py:218] type: train ... no label for BAC009S0601W0489
+W1031 15:42:26.736279 365 datasets.py:218] type: train ... no label for BAC009S0601W0373
+W1031 15:42:26.736325 365 datasets.py:218] type: train ... no label for BAC009S0601W0482
+W1031 15:42:26.736367 365 datasets.py:218] type: train ... no label for BAC009S0601W0479
+W1031 15:42:26.736407 365 datasets.py:218] type: train ... no label for BAC009S0601W0409
+W1031 15:42:26.736443 365 datasets.py:218] type: train ... no label for BAC009S0601W0366
+W1031 15:42:26.736479 365 datasets.py:218] type: train ... no label for BAC009S0601W0346
+W1031 15:42:26.736515 365 datasets.py:218] type: train ... no label for BAC009S0601W0343
+W1031 15:42:26.736551 365 datasets.py:218] type: train ... no label for BAC009S0601W0359
+W1031 15:42:26.736587 365 datasets.py:218] type: train ... no label for BAC009S0601W0419
+W1031 15:42:26.736634 365 datasets.py:218] type: train ... no label for BAC009S0601W0447
+W1031 15:42:26.736680 365 datasets.py:218] type: train ... no label for BAC009S0601W0342
+W1031 15:42:26.736726 365 datasets.py:218] type: train ... no label for BAC009S0601W0368
+W1031 15:42:26.736771 365 datasets.py:218] type: train ... no label for BAC009S0601W0350
+W1031 15:42:26.736807 365 datasets.py:218] type: train ... no label for BAC009S0601W0494
+W1031 15:42:26.736844 365 datasets.py:218] type: train ... no label for BAC009S0601W0344
+W1031 15:42:26.736888 365 datasets.py:218] type: train ... no label for BAC009S0601W0370
+W1031 15:42:26.736925 365 datasets.py:218] type: train ... no label for BAC009S0601W0486
+W1031 15:42:26.736961 365 datasets.py:218] type: train ... no label for BAC009S0601W0398
+W1031 15:42:26.737000 365 datasets.py:218] type: train ... no label for BAC009S0601W0416
+W1031 15:42:26.737039 365 datasets.py:218] type: train ... no label for BAC009S0601W0483
+W1031 15:42:26.737075 365 datasets.py:218] type: train ... no label for BAC009S0601W0395
+W1031 15:42:26.737114 365 datasets.py:218] type: train ... no label for BAC009S0601W0341
+W1031 15:42:26.737156 365 datasets.py:218] type: train ... no label for BAC009S0601W0446
+W1031 15:42:26.737197 365 datasets.py:218] type: train ... no label for BAC009S0601W0354
+W1031 15:42:26.737234 365 datasets.py:218] type: train ... no label for BAC009S0601W0382
+W1031 15:42:26.737277 365 datasets.py:218] type: train ... no label for BAC009S0601W0376
+W1031 15:42:26.737314 365 datasets.py:218] type: train ... no label for BAC009S0601W0405
+W1031 15:42:26.737360 365 datasets.py:218] type: train ... no label for BAC009S0601W0484
+W1031 15:42:26.737396 365 datasets.py:218] type: train ... no label for BAC009S0601W0413
+W1031 15:42:26.737435 365 datasets.py:218] type: train ... no label for BAC009S0601W0458
+W1031 15:42:26.737476 365 datasets.py:218] type: train ... no label for BAC009S0601W0461
+W1031 15:42:26.737521 365 datasets.py:218] type: train ... no label for BAC009S0601W0372
+W1031 15:42:26.737558 365 datasets.py:218] type: train ... no label for BAC009S0601W0427
+W1031 15:42:26.737594 365 datasets.py:218] type: train ... no label for BAC009S0601W0388
+W1031 15:42:26.737630 365 datasets.py:218] type: train ... no label for BAC009S0601W0347
+W1031 15:42:26.737666 365 datasets.py:218] type: train ... no label for BAC009S0601W0466
+W1031 15:42:26.737707 365 datasets.py:218] type: train ... no label for BAC009S0601W0460
+W1031 15:42:26.737744 365 datasets.py:218] type: train ... no label for BAC009S0601W0383
+W1031 15:42:26.737782 365 datasets.py:218] type: train ... no label for BAC009S0601W0406
+W1031 15:42:26.737821 365 datasets.py:218] type: train ... no label for BAC009S0601W0434
+W1031 15:42:26.737860 365 datasets.py:218] type: train ... no label for BAC009S0601W0393
+W1031 15:42:26.737895 365 datasets.py:218] type: train ... no label for BAC009S0601W0387
+W1031 15:42:26.737934 365 datasets.py:218] type: train ... no label for BAC009S0601W0412
+W1031 15:42:26.737973 365 datasets.py:218] type: train ... no label for BAC009S0601W0362
+W1031 15:42:26.738011 365 datasets.py:218] type: train ... no label for BAC009S0601W0467
+W1031 15:42:26.738050 365 datasets.py:218] type: train ... no label for BAC009S0601W0414
+W1031 15:42:26.738086 365 datasets.py:218] type: train ... no label for BAC009S0601W0469
+W1031 15:42:26.738122 365 datasets.py:218] type: train ... no label for BAC009S0601W0444
+W1031 15:42:26.738158 365 datasets.py:218] type: train ... no label for BAC009S0601W0463
+W1031 15:42:26.738194 365 datasets.py:218] type: train ... no label for BAC009S0601W0430
+W1031 15:42:26.738230 365 datasets.py:218] type: train ... no label for BAC009S0601W0453
+W1031 15:42:26.738265 365 datasets.py:218] type: train ... no label for BAC009S0601W0390
+W1031 15:42:26.738309 365 datasets.py:218] type: train ... no label for BAC009S0601W0488
+W1031 15:42:26.738351 365 datasets.py:218] type: train ... no label for BAC009S0601W0410
+W1031 15:42:26.738388 365 datasets.py:218] type: train ... no label for BAC009S0601W0495
+W1031 15:42:26.738424 365 datasets.py:218] type: train ... no label for BAC009S0601W0408
+W1031 15:42:26.738465 365 datasets.py:218] type: train ... no label for BAC009S0601W0470
+W1031 15:42:26.738507 365 datasets.py:218] type: train ... no label for BAC009S0601W0375
+W1031 15:42:26.738553 365 datasets.py:218] type: train ... no label for BAC009S0601W0464
+W1031 15:42:26.738595 365 datasets.py:218] type: train ... no label for BAC009S0601W0428
+W1031 15:42:26.738636 365 datasets.py:218] type: train ... no label for BAC009S0601W0345
+W1031 15:42:26.738673 365 datasets.py:218] type: train ... no label for BAC009S0601W0448
+W1031 15:42:26.738714 365 datasets.py:218] type: train ... no label for BAC009S0601W0422
+W1031 15:42:26.738754 365 datasets.py:218] type: train ... no label for BAC009S0601W0385
+W1031 15:42:26.738800 365 datasets.py:218] type: train ... no label for BAC009S0601W0490
+W1031 15:42:26.738836 365 datasets.py:218] type: train ... no label for BAC009S0601W0480
+W1031 15:42:26.738872 365 datasets.py:218] type: train ... no label for BAC009S0601W0374
+W1031 15:42:26.738920 365 datasets.py:218] type: train ... no label for BAC009S0601W0476
+W1031 15:42:26.738965 365 datasets.py:218] type: train ... no label for BAC009S0601W0471
+W1031 15:42:26.739004 365 datasets.py:218] type: train ... no label for BAC009S0601W0457
+W1031 15:42:26.739043 365 datasets.py:218] type: train ... no label for BAC009S0601W0365
+W1031 15:42:26.739080 365 datasets.py:218] type: train ... no label for BAC009S0601W0377
+W1031 15:42:26.739116 365 datasets.py:218] type: train ... no label for BAC009S0601W0391
+W1031 15:42:26.739152 365 datasets.py:218] type: train ... no label for BAC009S0601W0439
+W1031 15:42:26.739189 365 datasets.py:218] type: train ... no label for BAC009S0601W0487
+W1031 15:42:26.739225 365 datasets.py:218] type: train ... no label for BAC009S0601W0443
+W1031 15:42:26.739266 365 datasets.py:218] type: train ... no label for BAC009S0601W0392
+W1031 15:42:26.739302 365 datasets.py:218] type: train ... no label for BAC009S0601W0349
+W1031 15:42:26.739341 365 datasets.py:218] type: train ... no label for BAC009S0601W0402
+W1031 15:42:26.739378 365 datasets.py:218] type: train ... no label for BAC009S0601W0348
+W1031 15:42:26.739414 365 datasets.py:218] type: train ... no label for BAC009S0601W0441
+W1031 15:42:26.739449 365 datasets.py:218] type: train ... no label for BAC009S0601W0394
+W1031 15:42:26.739485 365 datasets.py:218] type: train ... no label for BAC009S0601W0491
+W1031 15:42:26.739524 365 datasets.py:218] type: train ... no label for BAC009S0601W0363
+W1031 15:42:26.739560 365 datasets.py:218] type: train ... no label for BAC009S0601W0367
+W1031 15:42:26.739597 365 datasets.py:218] type: train ... no label for BAC009S0601W0353
+W1031 15:42:26.739655 365 datasets.py:218] type: train ... no label for BAC009S0601W0324
+W1031 15:42:26.739692 365 datasets.py:218] type: train ... no label for BAC009S0601W0356
+W1031 15:42:26.739733 365 datasets.py:218] type: train ... no label for BAC009S0601W0396
+W1031 15:42:26.740436 365 datasets.py:218] type: train ... no label for BAC009S0118W0478
+W1031 15:42:26.744474 365 datasets.py:218] type: train ... no label for BAC009S0064W0431
+W1031 15:42:26.744731 365 datasets.py:218] type: train ... no label for BAC009S0064W0346
+W1031 15:42:26.745570 365 datasets.py:218] type: train ... no label for BAC009S0144W0356
+W1031 15:42:26.746013 365 datasets.py:218] type: train ... no label for BAC009S0190W0413
+W1031 15:42:26.746576 365 datasets.py:218] type: train ... no label for BAC009S0190W0428
+W1031 15:42:26.746693 365 datasets.py:218] type: train ... no label for BAC009S0190W0424
+W1031 15:42:26.747928 365 datasets.py:218] type: train ... no label for BAC009S0189W0419
+W1031 15:42:26.748043 365 datasets.py:218] type: train ... no label for BAC009S0189W0425
+W1031 15:42:26.748248 365 datasets.py:218] type: train ... no label for BAC009S0189W0416
+W1031 15:42:26.748652 365 datasets.py:218] type: train ... no label for BAC009S0189W0414
+W1031 15:42:26.749861 365 datasets.py:218] type: train ... no label for BAC009S0195W0442
+W1031 15:42:26.750612 365 datasets.py:218] type: train ... no label for BAC009S0182W0371
+W1031 15:42:26.750762 365 datasets.py:218] type: train ... no label for BAC009S0182W0429
+W1031 15:42:26.751908 365 datasets.py:218] type: train ... no label for BAC009S0721W0470
+W1031 15:42:26.754379 365 datasets.py:218] type: train ... no label for BAC009S0077W0448
+W1031 15:42:26.754558 365 datasets.py:218] type: train ... no label for BAC009S0077W0338
+W1031 15:42:26.757019 365 datasets.py:218] type: train ... no label for BAC009S0159W0399
+W1031 15:42:26.757106 365 datasets.py:218] type: train ... no label for BAC009S0159W0200
+W1031 15:42:26.757397 365 datasets.py:218] type: train ... no label for BAC009S0159W0360
+W1031 15:42:26.759232 365 datasets.py:218] type: train ... no label for BAC009S0065W0469
+W1031 15:42:26.761450 365 datasets.py:218] type: train ... no label for BAC009S0080W0134
+W1031 15:42:26.761607 365 datasets.py:218] type: train ... no label for BAC009S0080W0178
+W1031 15:42:26.761648 365 datasets.py:218] type: train ... no label for BAC009S0080W0368
+W1031 15:42:26.762280 365 datasets.py:218] type: train ... no label for BAC009S0080W0161
+W1031 15:42:26.766301 365 datasets.py:218] type: train ... no label for BAC009S0422W0262
+W1031 15:42:26.767858 365 datasets.py:218] type: train ... no label for BAC009S0184W0429
+W1031 15:42:26.767979 365 datasets.py:218] type: train ... no label for BAC009S0184W0415
+W1031 15:42:26.768067 365 datasets.py:218] type: train ... no label for BAC009S0184W0426
+W1031 15:42:26.768347 365 datasets.py:218] type: train ... no label for BAC009S0184W0408
+W1031 15:42:26.768444 365 datasets.py:218] type: train ... no label for BAC009S0184W0414
+W1031 15:42:26.768605 365 datasets.py:218] type: train ... no label for BAC009S0201W0422
+W1031 15:42:26.769396 365 datasets.py:218] type: train ... no label for BAC009S0201W0419
+W1031 15:42:26.769685 365 datasets.py:218] type: train ... no label for BAC009S0107W0279
+W1031 15:42:26.770519 365 datasets.py:218] type: train ... no label for BAC009S0191W0428
+W1031 15:42:26.770799 365 datasets.py:218] type: train ... no label for BAC009S0191W0416
+W1031 15:42:26.771290 365 datasets.py:218] type: train ... no label for BAC009S0191W0425
+W1031 15:42:26.771523 365 datasets.py:218] type: train ... no label for BAC009S0114W0423
+W1031 15:42:26.771842 365 datasets.py:218] type: train ... no label for BAC009S0114W0255
+W1031 15:42:26.778281 365 datasets.py:218] type: train ... no label for BAC009S0049W0491
+W1031 15:42:26.778761 365 datasets.py:218] type: train ... no label for BAC009S0049W0492
+W1031 15:42:26.779534 365 datasets.py:218] type: train ... no label for BAC009S0343W0416
+W1031 15:42:26.785973 365 datasets.py:218] type: train ... no label for BAC009S0706W0125
+W1031 15:42:26.786539 365 datasets.py:218] type: train ... no label for BAC009S0706W0262
+W1031 15:42:26.786968 365 datasets.py:218] type: train ... no label for BAC009S0706W0243
+W1031 15:42:26.787060 365 datasets.py:218] type: train ... no label for BAC009S0706W0160
+W1031 15:42:26.789262 365 datasets.py:218] type: train ... no label for BAC009S0132W0223
+W1031 15:42:26.789645 365 datasets.py:218] type: train ... no label for BAC009S0132W0398
+W1031 15:42:26.795418 365 datasets.py:218] type: train ... no label for BAC009S0146W0472
+W1031 15:42:26.795879 365 datasets.py:218] type: train ... no label for BAC009S0169W0384
+W1031 15:42:26.796192 365 datasets.py:218] type: train ... no label for BAC009S0169W0495
+W1031 15:42:26.796798 365 datasets.py:218] type: train ... no label for BAC009S0169W0489
+W1031 15:42:26.802620 365 datasets.py:218] type: train ... no label for BAC009S0521W0226
+W1031 15:42:26.803241 365 datasets.py:218] type: train ... no label for BAC009S0348W0486
+W1031 15:42:26.804241 365 datasets.py:218] type: train ... no label for BAC009S0664W0211
+W1031 15:42:26.805372 365 datasets.py:218] type: train ... no label for BAC009S0659W0430
+W1031 15:42:26.809297 365 datasets.py:218] type: train ... no label for BAC009S0141W0475
+W1031 15:42:26.812962 365 datasets.py:218] type: train ... no label for BAC009S0134W0484
+W1031 15:42:26.814301 365 datasets.py:218] type: train ... no label for BAC009S0150W0420
+W1031 15:42:26.815497 365 datasets.py:218] type: train ... no label for BAC009S0050W0152
+W1031 15:42:26.817284 365 datasets.py:218] type: train ... no label for BAC009S0152W0401
+W1031 15:42:26.819959 365 datasets.py:218] type: train ... no label for BAC009S0026W0202
+W1031 15:42:26.823865 365 datasets.py:218] type: train ... no label for BAC009S0249W0314
+W1031 15:42:26.824633 365 datasets.py:218] type: train ... no label for BAC009S0052W0417
+W1031 15:42:26.824739 365 datasets.py:218] type: train ... no label for BAC009S0052W0420
+W1031 15:42:26.824842 365 datasets.py:218] type: train ... no label for BAC009S0052W0302
+W1031 15:42:26.825720 365 datasets.py:218] type: train ... no label for BAC009S0665W0144
+W1031 15:42:26.826278 365 datasets.py:218] type: train ... no label for BAC009S0665W0326
+W1031 15:42:26.832828 365 datasets.py:218] type: train ... no label for BAC009S0183W0414
+W1031 15:42:26.833122 365 datasets.py:218] type: train ... no label for BAC009S0183W0408
+W1031 15:42:26.833279 365 datasets.py:218] type: train ... no label for BAC009S0183W0419
+W1031 15:42:26.833901 365 datasets.py:218] type: train ... no label for BAC009S0048W0490
+W1031 15:42:26.837869 365 datasets.py:218] type: train ... no label for BAC009S0044W0177
+W1031 15:42:26.840638 365 datasets.py:218] type: train ... no label for BAC009S0186W0423
+W1031 15:42:26.841191 365 datasets.py:218] type: train ... no label for BAC009S0186W0415
+W1031 15:42:26.841316 365 datasets.py:218] type: train ... no label for BAC009S0186W0429
+W1031 15:42:26.841408 365 datasets.py:218] type: train ... no label for BAC009S0186W0416
+W1031 15:42:26.841643 365 datasets.py:218] type: train ... no label for BAC009S0187W0420
+W1031 15:42:26.842322 365 datasets.py:218] type: train ... no label for BAC009S0187W0425
+W1031 15:42:26.844695 365 datasets.py:218] type: train ... no label for BAC009S0148W0277
+W1031 15:42:26.845343 365 datasets.py:218] type: train ... no label for BAC009S0217W0325
+W1031 15:42:26.845563 365 datasets.py:218] type: train ... no label for BAC009S0217W0321
+W1031 15:42:26.847276 365 datasets.py:218] type: train ... no label for BAC009S0512W0464
+W1031 15:42:26.850357 365 datasets.py:218] type: train ... no label for BAC009S0180W0127
+W1031 15:42:26.852298 365 datasets.py:218] type: train ... no label for BAC009S0019W0271
+W1031 15:42:26.852397 365 datasets.py:218] type: train ... no label for BAC009S0019W0418
+W1031 15:42:26.853164 365 datasets.py:218] type: train ... no label for BAC009S0124W0484
+W1031 15:42:26.853958 365 datasets.py:218] type: train ... no label for BAC009S0124W0264
+W1031 15:42:26.854922 365 datasets.py:218] type: train ... no label for BAC009S0013W0400
+W1031 15:42:26.862545 365 datasets.py:218] type: train ... no label for BAC009S0012W0442
+W1031 15:42:26.866797 365 datasets.py:218] type: train ... no label for BAC009S0598W0256
+W1031 15:42:26.867592 365 datasets.py:218] type: train ... no label for BAC009S0244W0492
+W1031 15:42:26.868006 365 datasets.py:218] type: train ... no label for BAC009S0244W0165
+W1031 15:42:26.871251 365 datasets.py:218] type: train ... no label for BAC009S0007W0169
+W1031 15:42:26.871867 365 datasets.py:218] type: train ... no label for BAC009S0004W0186
+W1031 15:42:26.872360 365 datasets.py:218] type: train ... no label for BAC009S0004W0419
+W1031 15:42:26.876363 365 datasets.py:218] type: train ... no label for BAC009S0245W0420
+W1031 15:42:26.880628 365 datasets.py:218] type: train ... no label for BAC009S0239W0492
+W1031 15:42:26.881353 365 datasets.py:218] type: train ... no label for BAC009S0239W0491
+W1031 15:42:26.881478 365 datasets.py:218] type: train ... no label for BAC009S0704W0416
+W1031 15:42:26.883691 365 datasets.py:218] type: train ... no label for BAC009S0151W0475
+W1031 15:42:26.884230 365 datasets.py:218] type: train ... no label for BAC009S0596W0214
+W1031 15:42:26.886435 365 datasets.py:218] type: train ... no label for BAC009S0219W0495
+W1031 15:42:26.887705 365 datasets.py:218] type: train ... no label for BAC009S0165W0197
+W1031 15:42:26.888597 365 datasets.py:218] type: train ... no label for BAC009S0204W0417
+W1031 15:42:26.890559 365 datasets.py:218] type: train ... no label for BAC009S0029W0399
+W1031 15:42:26.891528 365 datasets.py:218] type: train ... no label for BAC009S0247W0371
+W1031 15:42:26.891842 365 datasets.py:218] type: train ... no label for BAC009S0247W0410
+W1031 15:42:26.896459 365 datasets.py:218] type: train ... no label for BAC009S0192W0420
+W1031 15:42:26.896902 365 datasets.py:218] type: train ... no label for BAC009S0192W0471
+W1031 15:42:26.896995 365 datasets.py:218] type: train ... no label for BAC009S0192W0422
+W1031 15:42:26.898656 365 datasets.py:218] type: train ... no label for BAC009S0025W0477
+W1031 15:42:26.899472 365 datasets.py:218] type: train ... no label for BAC009S0097W0215
+I1031 15:42:26.899824 365 datasets.py:222] train tuple length ... 120098
+W1031 15:42:26.901990 365 datasets.py:218] type: dev ... no label for BAC009S0753W0361
+W1031 15:42:26.907507 365 datasets.py:218] type: dev ... no label for BAC009S0731W0379
+W1031 15:42:26.910638 365 datasets.py:218] type: dev ... no label for BAC009S0741W0386
+W1031 15:42:26.916472 365 datasets.py:218] type: dev ... no label for BAC009S0761W0332
+W1031 15:42:26.929103 365 datasets.py:218] type: dev ... no label for BAC009S0756W0343
+I1031 15:42:26.935319 365 datasets.py:222] dev tuple length ... 14326
+I1031 15:42:26.953002 365 datasets.py:222] test tuple length ... 7176
+I1031 15:42:26.955001 365 datasets.py:145] dictionary size: 4231
+I1031 15:42:31.620543 365 model.py:153] loss: 13.438522338867188, processing ... 0/3753
+I1031 15:42:33.188810 365 model.py:153] loss: 13.012334823608398, processing ... 1/3753
+I1031 15:42:34.705084 365 model.py:153] loss: 13.149045944213867, processing ... 2/3753
+I1031 15:42:36.249990 365 model.py:153] loss: 12.827284336090088, processing ... 3/3753
+I1031 15:42:37.749244 365 model.py:153] loss: 12.70689697265625, processing ... 4/3753
+I1031 15:42:39.260335 365 model.py:153] loss: 12.510227044423422, processing ... 5/3753
+I1031 15:42:40.740749 365 model.py:153] loss: 12.198422023228236, processing ... 6/3753
+I1031 15:42:42.358404 365 model.py:153] loss: 11.864521026611328, processing ... 7/3753
+I1031 15:42:43.865801 365 model.py:153] loss: 11.585137685139975, processing ... 8/3753
+I1031 15:42:45.572113 365 model.py:153] loss: 11.458291912078858, processing ... 9/3753
+I1031 15:42:47.327481 365 model.py:153] loss: 11.559648167003285, processing ... 10/3753
+I1031 15:42:48.946725 365 model.py:153] loss: 11.68962574005127, processing ... 11/3753
+I1031 15:42:50.473293 365 model.py:153] loss: 11.889600020188551, processing ... 12/3753
+I1031 15:42:52.095695 365 model.py:153] loss: 12.105971949441093, processing ... 13/3753
+I1031 15:42:53.566461 365 model.py:153] loss: 12.372240765889485, processing ... 14/3753
+I1031 15:42:55.128218 365 model.py:153] loss: 12.7022984623909, processing ... 15/3753
+I1031 15:42:56.591666 365 model.py:153] loss: 12.87304334079518, processing ... 16/3753
+I1031 15:42:58.038949 365 model.py:153] loss: 12.967931906382242, processing ... 17/3753
+I1031 15:42:59.614738 365 model.py:153] loss: 13.084520992479826, processing ... 18/3753
+I1031 15:43:01.138295 365 model.py:153] loss: 13.068054819107056, processing ... 19/3753
+I1031 15:43:03.132249 365 model.py:153] loss: 13.034566833859397, processing ... 20/3753
+I1031 15:43:04.602061 365 model.py:153] loss: 12.98514899340543, processing ... 21/3753
+I1031 15:43:06.017526 365 model.py:153] loss: 12.897605191106381, processing ... 22/3753
+I1031 15:43:07.527036 365 model.py:153] loss: 12.784484426180521, processing ... 23/3753
+I1031 15:43:09.055243 365 model.py:153] loss: 12.722081184387207, processing ... 24/3753
+I1031 15:43:10.517034 365 model.py:153] loss: 12.640941363114576, processing ... 25/3753
+I1031 15:43:12.018026 365 model.py:153] loss: 12.577480634053549, processing ... 26/3753
+I1031 15:43:13.741066 365 model.py:153] loss: 12.518979174750191, processing ... 27/3753
+I1031 15:43:15.294180 365 model.py:153] loss: 12.481466918156064, processing ... 28/3753
+I1031 15:43:16.822249 365 model.py:153] loss: 12.44628849029541, processing ... 29/3753
+I1031 15:43:18.336510 365 model.py:153] loss: 12.44639119794292, processing ... 30/3753
+I1031 15:43:19.835060 365 model.py:153] loss: 12.4299556016922, processing ... 31/3753
+I1031 15:43:21.428008 365 model.py:153] loss: 12.373581395004734, processing ... 32/3753
+I1031 15:43:23.094672 365 model.py:153] loss: 12.304084132699405, processing ... 33/3753
+I1031 15:43:24.627947 365 model.py:153] loss: 12.24657576424735, processing ... 34/3753
+I1031 15:43:26.187259 365 model.py:153] loss: 12.181297090318468, processing ... 35/3753
+I1031 15:43:27.721125 365 model.py:153] loss: 12.110481030232197, processing ... 36/3753
+I1031 15:43:29.224069 365 model.py:153] loss: 12.043105928521408, processing ... 37/3753
+I1031 15:43:30.601326 365 model.py:153] loss: 11.975958946423653, processing ... 38/3753
+I1031 15:43:32.365730 365 model.py:153] loss: 11.904174613952637, processing ... 39/3753
+I1031 15:43:34.294192 365 model.py:153] loss: 11.829901718511813, processing ... 40/3753
+I1031 15:43:35.852279 365 model.py:153] loss: 11.760328065781366, processing ... 41/3753
+I1031 15:43:37.410745 365 model.py:153] loss: 11.697549221127533, processing ... 42/3753
+I1031 15:43:38.763785 365 model.py:153] loss: 11.65203053301031, processing ... 43/3753
+I1031 15:43:40.333521 365 model.py:153] loss: 11.603795623779297, processing ... 44/3753
+I1031 15:43:41.823964 365 model.py:153] loss: 11.54960823059082, processing ... 45/3753
+I1031 15:43:43.294197 365 model.py:153] loss: 11.492093877589449, processing ... 46/3753
+I1031 15:43:44.793410 365 model.py:153] loss: 11.4287482102712, processing ... 47/3753
+I1031 15:43:46.318692 365 model.py:153] loss: 11.375264401338539, processing ... 48/3753
+I1031 15:43:47.941148 365 model.py:153] loss: 11.327106475830078, processing ... 49/3753
+I1031 15:43:49.596692 365 model.py:153] loss: 11.281195584465475, processing ... 50/3753
+I1031 15:43:51.113092 365 model.py:153] loss: 11.230554654048039, processing ... 51/3753
+I1031 15:43:52.619097 365 model.py:153] loss: 11.180223392990401, processing ... 52/3753
+I1031 15:43:54.182698 365 model.py:153] loss: 11.141168823948613, processing ... 53/3753
+I1031 15:43:55.782356 365 model.py:153] loss: 11.114566438848323, processing ... 54/3753
+I1031 15:43:57.270911 365 model.py:153] loss: 11.092837282589503, processing ... 55/3753
+I1031 15:43:58.849200 365 model.py:153] loss: 11.055181720800567, processing ... 56/3753
+I1031 15:44:00.415533 365 model.py:153] loss: 11.011326280133478, processing ... 57/3753
+I1031 15:44:01.861766 365 model.py:153] loss: 10.967284364215399, processing ... 58/3753
+I1031 15:44:03.424782 365 model.py:153] loss: 10.925617011388143, processing ... 59/3753
+I1031 15:44:05.363923 365 model.py:153] loss: 10.886099268178471, processing ... 60/3753
+I1031 15:44:06.890950 365 model.py:153] loss: 10.847396512185373, processing ... 61/3753
+I1031 15:44:08.585740 365 model.py:153] loss: 10.808870255001008, processing ... 62/3753
+I1031 15:44:10.792876 365 model.py:153] loss: 10.772436276078224, processing ... 63/3753
+I1031 15:44:12.376740 365 model.py:153] loss: 10.746820757939265, processing ... 64/3753
+I1031 15:44:13.936914 365 model.py:153] loss: 10.722350510683926, processing ... 65/3753
+I1031 15:44:15.546083 365 model.py:153] loss: 10.706961831050133, processing ... 66/3753
+I1031 15:44:16.910727 365 model.py:153] loss: 10.689646791009341, processing ... 67/3753
+I1031 15:44:18.466997 365 model.py:153] loss: 10.667432978533316, processing ... 68/3753
+I1031 15:44:20.022030 365 model.py:153] loss: 10.641228457859585, processing ... 69/3753
+I1031 15:44:21.447308 365 model.py:153] loss: 10.61238147843052, processing ... 70/3753
+I1031 15:44:22.960895 365 model.py:153] loss: 10.58054969045851, processing ... 71/3753
+I1031 15:44:24.501109 365 model.py:153] loss: 10.549900734261291, processing ... 72/3753
+I1031 15:44:26.154901 365 model.py:153] loss: 10.519018766042349, processing ... 73/3753
+I1031 15:44:27.675403 365 model.py:153] loss: 10.489385286966959, processing ... 74/3753
+I1031 15:44:29.218676 365 model.py:153] loss: 10.459247902819985, processing ... 75/3753
+I1031 15:44:30.838750 365 model.py:153] loss: 10.43175812510701, processing ... 76/3753
+I1031 15:44:32.500546 365 model.py:153] loss: 10.407196044921875, processing ... 77/3753
+I1031 15:44:34.149334 365 model.py:153] loss: 10.392917874493177, processing ... 78/3753
+I1031 15:44:35.774029 365 model.py:153] loss: 10.3809978723526, processing ... 79/3753
+I1031 15:44:37.469913 365 model.py:153] loss: 10.362209967624993, processing ... 80/3753
+I1031 15:44:38.950394 365 model.py:153] loss: 10.344597630384492, processing ... 81/3753
+I1031 15:44:40.523551 365 model.py:153] loss: 10.32267246476139, processing ... 82/3753
+I1031 15:44:42.059710 365 model.py:153] loss: 10.297768411182222, processing ... 83/3753
+I1031 15:44:43.667372 365 model.py:153] loss: 10.277742554159726, processing ... 84/3753
+I1031 15:44:45.066710 365 model.py:153] loss: 10.254881138025327, processing ... 85/3753
+I1031 15:44:47.072092 365 model.py:153] loss: 10.23517807050683, processing ... 86/3753
+I1031 15:44:48.529238 365 model.py:153] loss: 10.212420235980641, processing ... 87/3753
+I1031 15:44:49.978264 365 model.py:153] loss: 10.18841290206052, processing ... 88/3753
+I1031 15:44:51.466770 365 model.py:153] loss: 10.16564474105835, processing ... 89/3753
+I1031 15:44:52.890349 365 model.py:153] loss: 10.145530753083282, processing ... 90/3753
+I1031 15:44:54.715721 365 model.py:153] loss: 10.123315469078396, processing ... 91/3753
+I1031 15:44:56.275899 365 model.py:153] loss: 10.102901017794045, processing ... 92/3753
+I1031 15:44:57.655418 365 model.py:153] loss: 10.082964318863889, processing ... 93/3753
+I1031 15:44:59.122702 365 model.py:153] loss: 10.061977998833907, processing ... 94/3753
+I1031 15:45:00.858428 365 model.py:153] loss: 10.043583363294601, processing ... 95/3753
+I1031 15:45:02.353948 365 model.py:153] loss: 10.022911199589366, processing ... 96/3753
+I1031 15:45:03.849067 365 model.py:153] loss: 10.004593790793905, processing ... 97/3753
+I1031 15:45:05.388386 365 model.py:153] loss: 9.985153901456583, processing ... 98/3753
+I1031 15:45:06.969092 365 model.py:153] loss: 9.96821798324585, processing ... 99/3753
+I1031 15:45:08.419548 365 model.py:153] loss: 9.953211510535514, processing ... 100/3753
+I1031 15:45:09.928056 365 model.py:153] loss: 9.937381856581744, processing ... 101/3753
+I1031 15:45:11.528847 365 model.py:153] loss: 9.92493966482218, processing ... 102/3753
+I1031 15:45:13.053125 365 model.py:153] loss: 9.909628776403574, processing ... 103/3753
+I1031 15:45:14.472582 365 model.py:153] loss: 9.891713714599609, processing ... 104/3753
+I1031 15:45:15.962658 365 model.py:153] loss: 9.873729719305938, processing ... 105/3753
+I1031 15:45:17.468619 365 model.py:153] loss: 9.85625425231791, processing ... 106/3753
+I1031 15:45:18.990404 365 model.py:153] loss: 9.839505085238704, processing ... 107/3753
+I1031 15:45:20.437121 365 model.py:153] loss: 9.822284506001603, processing ... 108/3753
+I1031 15:45:21.729904 365 model.py:153] loss: 9.805197191238403, processing ... 109/3753
+I1031 15:45:23.984800 365 model.py:153] loss: 9.78859907012802, processing ... 110/3753
+I1031 15:45:25.515747 365 model.py:153] loss: 9.775076461689812, processing ... 111/3753
+I1031 15:45:27.077504 365 model.py:153] loss: 9.762034783321145, processing ... 112/3753
+I1031 15:45:28.693222 365 model.py:153] loss: 9.74869536098681, processing ... 113/3753
+I1031 15:45:30.595617 365 model.py:153] loss: 9.736326686195705, processing ... 114/3753
+I1031 15:45:32.356316 365 model.py:153] loss: 9.728215106602374, processing ... 115/3753
+I1031 15:45:34.024486 365 model.py:153] loss: 9.723453044891357, processing ... 116/3753
+I1031 15:45:35.498550 365 model.py:153] loss: 9.7217599537413, processing ... 117/3753
+I1031 15:45:37.197506 365 model.py:153] loss: 9.71708064920762, processing ... 118/3753
+I1031 15:45:38.722354 365 model.py:153] loss: 9.71379322608312, processing ... 119/3753
+I1031 15:45:40.362709 365 model.py:153] loss: 9.70669169071292, processing ... 120/3753
+I1031 15:45:41.906323 365 model.py:153] loss: 9.69817955376672, processing ... 121/3753
+I1031 15:45:43.386658 365 model.py:153] loss: 9.686763426152671, processing ... 122/3753
+I1031 15:45:44.779575 365 model.py:153] loss: 9.673314098388918, processing ... 123/3753
+I1031 15:45:46.296683 365 model.py:153] loss: 9.658920543670654, processing ... 124/3753
+I1031 15:45:47.677002 365 model.py:153] loss: 9.64430210325453, processing ... 125/3753
+I1031 15:45:49.397755 365 model.py:153] loss: 9.630224145303561, processing ... 126/3753
+I1031 15:45:50.926409 365 model.py:153] loss: 9.61621356755495, processing ... 127/3753
+I1031 15:45:52.572541 365 model.py:153] loss: 9.604419508645702, processing ... 128/3753
+I1031 15:45:54.068625 365 model.py:153] loss: 9.598919641054593, processing ... 129/3753
+I1031 15:45:55.595847 365 model.py:153] loss: 9.601354067562191, processing ... 130/3753
+I1031 15:45:57.134947 365 model.py:153] loss: 9.6047397888068, processing ... 131/3753
+I1031 15:45:58.661749 365 model.py:153] loss: 9.60787882840723, processing ... 132/3753
+I1031 15:46:00.368545 365 model.py:153] loss: 9.606512019883342, processing ... 133/3753
+I1031 15:46:02.201142 365 model.py:153] loss: 9.597690688239204, processing ... 134/3753
+I1031 15:46:03.769672 365 model.py:153] loss: 9.58772812871372, processing ... 135/3753
+I1031 15:46:05.289094 365 model.py:153] loss: 9.574795458438622, processing ... 136/3753
+I1031 15:46:06.860155 365 model.py:153] loss: 9.56316287966742, processing ... 137/3753
+I1031 15:46:08.381177 365 model.py:153] loss: 9.55107207263974, processing ... 138/3753
+I1031 15:46:10.045161 365 model.py:153] loss: 9.53763358252389, processing ... 139/3753
+I1031 15:46:11.658238 365 model.py:153] loss: 9.525846988596815, processing ... 140/3753
+I1031 15:46:13.183376 365 model.py:153] loss: 9.515956267504626, processing ... 141/3753
+I1031 15:46:14.664116 365 model.py:153] loss: 9.506886302174388, processing ... 142/3753
+I1031 15:46:16.237118 365 model.py:153] loss: 9.495370735724768, processing ... 143/3753
+I1031 15:46:17.881953 365 model.py:153] loss: 9.48451544991855, processing ... 144/3753
+I1031 15:46:19.736699 365 model.py:153] loss: 9.473410067492969, processing ... 145/3753
+I1031 15:46:21.322062 365 model.py:153] loss: 9.462264680538048, processing ... 146/3753
+I1031 15:46:22.940168 365 model.py:153] loss: 9.450940238462913, processing ... 147/3753
+I1031 15:46:24.641315 365 model.py:153] loss: 9.441225823139984, processing ... 148/3753
+I1031 15:46:26.063249 365 model.py:153] loss: 9.432610642115275, processing ... 149/3753
+I1031 15:46:27.504500 365 model.py:153] loss: 9.423733341772826, processing ... 150/3753
+I1031 15:46:29.108880 365 model.py:153] loss: 9.414273236927233, processing ... 151/3753
+I1031 15:46:30.751785 365 model.py:153] loss: 9.405668333464979, processing ... 152/3753
+I1031 15:46:32.170714 365 model.py:153] loss: 9.39642519145817, processing ... 153/3753
+I1031 15:46:33.748993 365 model.py:153] loss: 9.38659623361403, processing ... 154/3753
+I1031 15:46:35.974837 365 model.py:153] loss: 9.376554143734467, processing ... 155/3753
+I1031 15:46:37.491227 365 model.py:153] loss: 9.365345368719405, processing ... 156/3753
+I1031 15:46:39.056722 365 model.py:153] loss: 9.35477608065062, processing ... 157/3753
+I1031 15:46:40.629644 365 model.py:153] loss: 9.345279633624, processing ... 158/3753
+I1031 15:46:42.121678 365 model.py:153] loss: 9.336663988232612, processing ... 159/3753
+I1031 15:46:43.743139 365 model.py:153] loss: 9.327589032072458, processing ... 160/3753
+I1031 15:46:45.444858 365 model.py:153] loss: 9.319553007314235, processing ... 161/3753
+I1031 15:46:47.108938 365 model.py:153] loss: 9.314846334281874, processing ... 162/3753
+I1031 15:46:48.828364 365 model.py:153] loss: 9.307789543779885, processing ... 163/3753
+I1031 15:46:50.474864 365 model.py:153] loss: 9.299614154931271, processing ... 164/3753
+I1031 15:46:52.127678 365 model.py:153] loss: 9.292534380074008, processing ... 165/3753
+I1031 15:46:53.690537 365 model.py:153] loss: 9.283370046558494, processing ... 166/3753
+I1031 15:46:55.360862 365 model.py:153] loss: 9.275133459340958, processing ... 167/3753
+I1031 15:46:56.911542 365 model.py:153] loss: 9.265947703073715, processing ... 168/3753
+I1031 15:46:58.478089 365 model.py:153] loss: 9.256134285646326, processing ... 169/3753
+I1031 15:47:00.266826 365 model.py:153] loss: 9.248382102676302, processing ... 170/3753
+I1031 15:47:01.705224 365 model.py:153] loss: 9.239543016566786, processing ... 171/3753
+I1031 15:47:03.235098 365 model.py:153] loss: 9.233259460140514, processing ... 172/3753
+I1031 15:47:04.851192 365 model.py:153] loss: 9.226997841363666, processing ... 173/3753
+I1031 15:47:06.381696 365 model.py:153] loss: 9.220215007237025, processing ... 174/3753
+I1031 15:47:07.896421 365 model.py:153] loss: 9.212846100330353, processing ... 175/3753
+I1031 15:47:09.526690 365 model.py:153] loss: 9.205164677679202, processing ... 176/3753
+I1031 15:47:11.205786 365 model.py:153] loss: 9.198120647601867, processing ... 177/3753
+I1031 15:47:13.022341 365 model.py:153] loss: 9.192980068355965, processing ... 178/3753
+I1031 15:47:14.480615 365 model.py:153] loss: 9.191416751013861, processing ... 179/3753
+I1031 15:47:16.138782 365 model.py:153] loss: 9.187801993354249, processing ... 180/3753
+I1031 15:47:17.624695 365 model.py:153] loss: 9.185268464979234, processing ... 181/3753
+I1031 15:47:19.254553 365 model.py:153] loss: 9.178897065543087, processing ... 182/3753
+I1031 15:47:20.753711 365 model.py:153] loss: 9.17112511396408, processing ... 183/3753
+I1031 15:47:22.296260 365 model.py:153] loss: 9.162419107797984, processing ... 184/3753
+I1031 15:47:23.862964 365 model.py:153] loss: 9.15508088757915, processing ... 185/3753
+I1031 15:47:25.306233 365 model.py:153] loss: 9.148121476810884, processing ... 186/3753
+I1031 15:47:26.903656 365 model.py:153] loss: 9.14195934762346, processing ... 187/3753
+I1031 15:47:28.335673 365 model.py:153] loss: 9.13519288370849, processing ... 188/3753
+I1031 15:47:29.948059 365 model.py:153] loss: 9.129319579977738, processing ... 189/3753
+I1031 15:47:31.693621 365 model.py:153] loss: 9.123261069752159, processing ... 190/3753
+I1031 15:47:33.317668 365 model.py:153] loss: 9.116122854252657, processing ... 191/3753
+I1031 15:47:34.800872 365 model.py:153] loss: 9.108081968337142, processing ... 192/3753
+I1031 15:47:36.380942 365 model.py:153] loss: 9.101296692779384, processing ... 193/3753
+I1031 15:47:38.015474 365 model.py:153] loss: 9.093380446311755, processing ... 194/3753
+I1031 15:47:39.547616 365 model.py:153] loss: 9.087002335762492, processing ... 195/3753
+I1031 15:47:41.002365 365 model.py:153] loss: 9.080258325876922, processing ... 196/3753
+I1031 15:47:42.580749 365 model.py:153] loss: 9.073858169594196, processing ... 197/3753
+I1031 15:47:44.099284 365 model.py:153] loss: 9.066709925780943, processing ... 198/3753
+I1031 15:47:45.647598 365 model.py:153] loss: 9.060157089233398, processing ... 199/3753
+I1031 15:47:48.422155 365 model.py:153] loss: 9.052849005703901, processing ... 200/3753
+I1031 15:47:50.414797 365 model.py:153] loss: 9.045868694192112, processing ... 201/3753
+I1031 15:47:52.400276 365 model.py:153] loss: 9.040497378175482, processing ... 202/3753
+I1031 15:47:54.214194 365 model.py:153] loss: 9.036100862072963, processing ... 203/3753
+I1031 15:47:55.809681 365 model.py:153] loss: 9.030363131732475, processing ... 204/3753
+I1031 15:47:57.256888 365 model.py:153] loss: 9.024012128126275, processing ... 205/3753
+I1031 15:47:58.822134 365 model.py:153] loss: 9.015999985201923, processing ... 206/3753
+I1031 15:48:00.559777 365 model.py:153] loss: 9.008772845451649, processing ... 207/3753
+I1031 15:48:02.344990 365 model.py:153] loss: 9.003852237354625, processing ... 208/3753
+I1031 15:48:04.155571 365 model.py:153] loss: 8.996785172962007, processing ... 209/3753
+I1031 15:48:05.645611 365 model.py:153] loss: 8.990608721547781, processing ... 210/3753
+I1031 15:48:07.180997 365 model.py:153] loss: 8.984501640751677, processing ... 211/3753
+I1031 15:48:08.979210 365 model.py:153] loss: 8.979107977638781, processing ... 212/3753
+I1031 15:48:10.629148 365 model.py:153] loss: 8.971686488000032, processing ... 213/3753
+I1031 15:48:12.454189 365 model.py:153] loss: 8.96488800935967, processing ... 214/3753
+I1031 15:48:14.094418 365 model.py:153] loss: 8.957844539924904, processing ... 215/3753
+I1031 15:48:16.037175 365 model.py:153] loss: 8.951162579971525, processing ... 216/3753
+I1031 15:48:18.307847 365 model.py:153] loss: 8.944383065634911, processing ... 217/3753
+I1031 15:48:21.900770 365 model.py:153] loss: 8.93752907182528, processing ... 218/3753
+I1031 15:48:24.372561 365 model.py:153] loss: 8.931375874172558, processing ... 219/3753
+I1031 15:48:26.032284 365 model.py:153] loss: 8.925391596366916, processing ... 220/3753
+I1031 15:48:27.760455 365 model.py:153] loss: 8.919048925777814, processing ... 221/3753
+I1031 15:48:29.295610 365 model.py:153] loss: 8.911238281181575, processing ... 222/3753
+I1031 15:48:31.101499 365 model.py:153] loss: 8.904922074505262, processing ... 223/3753
+I1031 15:48:32.689755 365 model.py:153] loss: 8.899291581047907, processing ... 224/3753
+I1031 15:48:34.278623 365 model.py:153] loss: 8.893901419850577, processing ... 225/3753
+I1031 15:48:36.002195 365 model.py:153] loss: 8.888264009080794, processing ... 226/3753
+I1031 15:48:37.692989 365 model.py:153] loss: 8.882225733054312, processing ... 227/3753
+I1031 15:48:39.282947 365 model.py:153] loss: 8.87514592674622, processing ... 228/3753
+I1031 15:48:40.918255 365 model.py:153] loss: 8.87007384714873, processing ... 229/3753
+I1031 15:48:42.406390 365 model.py:153] loss: 8.867590815473944, processing ... 230/3753
+I1031 15:48:43.871976 365 model.py:153] loss: 8.862388456689901, processing ... 231/3753
+I1031 15:48:45.553491 365 model.py:153] loss: 8.857895226949275, processing ... 232/3753
+I1031 15:48:47.094587 365 model.py:153] loss: 8.854324791166517, processing ... 233/3753
+I1031 15:48:48.730210 365 model.py:153] loss: 8.851527078100975, processing ... 234/3753
+I1031 15:48:50.327865 365 model.py:153] loss: 8.847334023249351, processing ... 235/3753
+I1031 15:48:51.775622 365 model.py:153] loss: 8.842032740387735, processing ... 236/3753
+I1031 15:48:53.447692 365 model.py:153] loss: 8.838438244426952, processing ... 237/3753
+I1031 15:48:54.999015 365 model.py:153] loss: 8.837169078603448, processing ... 238/3753
+I1031 15:48:57.277850 365 model.py:153] loss: 8.835319155454636, processing ... 239/3753
+I1031 15:48:58.938680 365 model.py:153] loss: 8.830739775139266, processing ... 240/3753
+I1031 15:49:00.820635 365 model.py:153] loss: 8.82419307172791, processing ... 241/3753
+I1031 15:49:02.419439 365 model.py:153] loss: 8.818594638212227, processing ... 242/3753
+I1031 15:49:04.039693 365 model.py:153] loss: 8.813130527246194, processing ... 243/3753
+I1031 15:49:05.538880 365 model.py:153] loss: 8.807888969109984, processing ... 244/3753
+I1031 15:49:07.135773 365 model.py:153] loss: 8.802463019766458, processing ... 245/3753
+I1031 15:49:08.657649 365 model.py:153] loss: 8.798323198851303, processing ... 246/3753
+I1031 15:49:10.155567 365 model.py:153] loss: 8.794998293922793, processing ... 247/3753
+I1031 15:49:11.755086 365 model.py:153] loss: 8.791531922826806, processing ... 248/3753
+I1031 15:49:13.350958 365 model.py:153] loss: 8.786574131011962, processing ... 249/3753
+I1031 15:49:14.943063 365 model.py:153] loss: 8.78165459727861, processing ... 250/3753
+I1031 15:49:16.615566 365 model.py:153] loss: 8.776220047284687, processing ... 251/3753
+I1031 15:49:18.028100 365 model.py:153] loss: 8.770753547608146, processing ... 252/3753
+I1031 15:49:19.538941 365 model.py:153] loss: 8.766182084721843, processing ... 253/3753
+I1031 15:49:21.226528 365 model.py:153] loss: 8.76101796393301, processing ... 254/3753
+I1031 15:49:22.838346 365 model.py:153] loss: 8.756096545606852, processing ... 255/3753
+I1031 15:49:24.294848 365 model.py:153] loss: 8.75301105781288, processing ... 256/3753
+I1031 15:49:25.770655 365 model.py:153] loss: 8.750308095946792, processing ... 257/3753
+I1031 15:49:27.325851 365 model.py:153] loss: 8.748502510394829, processing ... 258/3753
+I1031 15:49:28.786605 365 model.py:153] loss: 8.745514334165133, processing ... 259/3753
+I1031 15:49:30.242502 365 model.py:153] loss: 8.741585945260935, processing ... 260/3753
+I1031 15:49:31.729538 365 model.py:153] loss: 8.736704422317388, processing ... 261/3753
+I1031 15:49:33.787940 365 model.py:153] loss: 8.731956006909504, processing ... 262/3753
+I1031 15:49:35.413551 365 model.py:153] loss: 8.72649241216255, processing ... 263/3753
+I1031 15:49:36.899401 365 model.py:153] loss: 8.721790353307185, processing ... 264/3753
+I1031 15:49:38.414995 365 model.py:153] loss: 8.716665673076658, processing ... 265/3753
+I1031 15:49:40.174891 365 model.py:153] loss: 8.71230973733052, processing ... 266/3753
+I1031 15:49:41.821252 365 model.py:153] loss: 8.707096759952716, processing ... 267/3753
+I1031 15:49:43.478951 365 model.py:153] loss: 8.701805967380567, processing ... 268/3753
+I1031 15:49:45.054704 365 model.py:153] loss: 8.697776460647583, processing ... 269/3753
+I1031 15:49:46.734557 365 model.py:153] loss: 8.69278929066394, processing ... 270/3753
+I1031 15:49:48.506957 365 model.py:153] loss: 8.687820965752882, processing ... 271/3753
+I1031 15:49:50.167911 365 model.py:153] loss: 8.683393862657931, processing ... 272/3753
+I1031 15:49:51.670728 365 model.py:153] loss: 8.679523159987735, processing ... 273/3753
+I1031 15:49:53.168298 365 model.py:153] loss: 8.675731563568116, processing ... 274/3753
+I1031 15:49:54.680473 365 model.py:153] loss: 8.673345964887869, processing ... 275/3753
+I1031 15:49:56.191965 365 model.py:153] loss: 8.66974413696179, processing ... 276/3753
+I1031 15:49:57.920758 365 model.py:153] loss: 8.665475150664076, processing ... 277/3753
+I1031 15:49:59.468986 365 model.py:153] loss: 8.660530775678629, processing ... 278/3753
+I1031 15:50:00.948891 365 model.py:153] loss: 8.65519265277045, processing ... 279/3753
+I1031 15:50:02.489221 365 model.py:153] loss: 8.65141531581132, processing ... 280/3753
+I1031 15:50:04.089317 365 model.py:153] loss: 8.647107790547905, processing ... 281/3753
+I1031 15:50:05.642940 365 model.py:153] loss: 8.643035814534649, processing ... 282/3753
+I1031 15:50:07.233718 365 model.py:153] loss: 8.638649430073484, processing ... 283/3753
+I1031 15:50:08.696413 365 model.py:153] loss: 8.634795936785245, processing ... 284/3753
+I1031 15:50:10.887536 365 model.py:153] loss: 8.630300043346164, processing ... 285/3753
+I1031 15:50:12.587699 365 model.py:153] loss: 8.625841936583303, processing ... 286/3753
+I1031 15:50:14.160091 365 model.py:153] loss: 8.620981569091478, processing ... 287/3753
+I1031 15:50:15.781816 365 model.py:153] loss: 8.616126669319444, processing ... 288/3753
+I1031 15:50:17.462599 365 model.py:153] loss: 8.612305064036928, processing ... 289/3753
+I1031 15:50:19.122763 365 model.py:153] loss: 8.607961413786583, processing ... 290/3753
+I1031 15:50:20.785077 365 model.py:153] loss: 8.603338853953636, processing ... 291/3753
+I1031 15:50:22.376675 365 model.py:153] loss: 8.599153201327796, processing ... 292/3753
+I1031 15:50:23.993546 365 model.py:153] loss: 8.59448706536066, processing ... 293/3753
+I1031 15:50:25.588523 365 model.py:153] loss: 8.59042896820327, processing ... 294/3753
+I1031 15:50:27.104842 365 model.py:153] loss: 8.586059465601638, processing ... 295/3753
+I1031 15:50:28.894585 365 model.py:153] loss: 8.582777997861406, processing ... 296/3753
+I1031 15:50:30.476128 365 model.py:153] loss: 8.578414116929842, processing ... 297/3753
+I1031 15:50:32.123948 365 model.py:153] loss: 8.574563447448321, processing ... 298/3753
+I1031 15:50:33.588609 365 model.py:153] loss: 8.5704372549057, processing ... 299/3753
+I1031 15:50:35.808492 365 model.py:153] loss: 8.56696374234171, processing ... 300/3753
+I1031 15:50:37.402845 365 model.py:153] loss: 8.56259531848478, processing ... 301/3753
+I1031 15:50:38.953050 365 model.py:153] loss: 8.558717903917772, processing ... 302/3753
+I1031 15:50:40.623694 365 model.py:153] loss: 8.554523819371274, processing ... 303/3753
+I1031 15:50:42.180256 365 model.py:153] loss: 8.550635616114882, processing ... 304/3753
+I1031 15:50:43.884873 365 model.py:153] loss: 8.546565526451161, processing ... 305/3753
+I1031 15:50:45.878540 365 model.py:153] loss: 8.543055503298483, processing ... 306/3753
+I1031 15:50:47.787603 365 model.py:153] loss: 8.539215871265956, processing ... 307/3753
+I1031 15:50:49.624377 365 model.py:153] loss: 8.535989855485441, processing ... 308/3753
+I1031 15:50:51.455778 365 model.py:153] loss: 8.532422067273048, processing ... 309/3753
+I1031 15:50:53.134962 365 model.py:153] loss: 8.528523983296092, processing ... 310/3753
+I1031 15:50:55.011339 365 model.py:153] loss: 8.525051078735254, processing ... 311/3753
+I1031 15:50:56.631577 365 model.py:153] loss: 8.521430428416584, processing ... 312/3753
+I1031 15:50:58.323379 365 model.py:153] loss: 8.517741406799122, processing ... 313/3753
+I1031 15:51:00.003889 365 model.py:153] loss: 8.514593078976585, processing ... 314/3753
+I1031 15:51:01.875590 365 model.py:153] loss: 8.510862012452717, processing ... 315/3753
+I1031 15:51:03.635803 365 model.py:153] loss: 8.506899203411788, processing ... 316/3753
+I1031 15:51:05.161639 365 model.py:153] loss: 8.504730103150854, processing ... 317/3753
+I1031 15:51:06.793928 365 model.py:153] loss: 8.50283358612778, processing ... 318/3753
+I1031 15:51:08.475538 365 model.py:153] loss: 8.500508248806, processing ... 319/3753
+I1031 15:51:10.130097 365 model.py:153] loss: 8.497244059482467, processing ... 320/3753
+I1031 15:51:11.660679 365 model.py:153] loss: 8.493466664545284, processing ... 321/3753
+I1031 15:51:13.079068 365 model.py:153] loss: 8.490332337724904, processing ... 322/3753
+I1031 15:51:14.563368 365 model.py:153] loss: 8.48814981955069, processing ... 323/3753
+I1031 15:51:15.995846 365 model.py:153] loss: 8.48562185874352, processing ... 324/3753
+I1031 15:51:17.594520 365 model.py:153] loss: 8.48176871486968, processing ... 325/3753
+I1031 15:51:19.069751 365 model.py:153] loss: 8.478056521226142, processing ... 326/3753
+I1031 15:51:20.536484 365 model.py:153] loss: 8.474720792072576, processing ... 327/3753
+I1031 15:51:22.790510 365 model.py:153] loss: 8.471261963655884, processing ... 328/3753
+I1031 15:51:24.507890 365 model.py:153] loss: 8.46782491568363, processing ... 329/3753
+I1031 15:51:26.235470 365 model.py:153] loss: 8.463769709595741, processing ... 330/3753
+I1031 15:51:28.149654 365 model.py:153] loss: 8.460041715438107, processing ... 331/3753
+I1031 15:51:29.737811 365 model.py:153] loss: 8.456672602587634, processing ... 332/3753
+I1031 15:51:31.461208 365 model.py:153] loss: 8.45394364945189, processing ... 333/3753
+I1031 15:51:33.105889 365 model.py:153] loss: 8.450893138771626, processing ... 334/3753
+I1031 15:51:34.586435 365 model.py:153] loss: 8.44782162138394, processing ... 335/3753
+I1031 15:51:35.963090 365 model.py:153] loss: 8.444382032230275, processing ... 336/3753
+I1031 15:51:37.568425 365 model.py:153] loss: 8.440975685796793, processing ... 337/3753
+I1031 15:51:39.155222 365 model.py:153] loss: 8.437908297794758, processing ... 338/3753
+I1031 15:51:40.720319 365 model.py:153] loss: 8.43457299120286, processing ... 339/3753
+I1031 15:51:42.326527 365 model.py:153] loss: 8.431643972648553, processing ... 340/3753
