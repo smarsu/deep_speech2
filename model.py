@@ -130,6 +130,15 @@ class SpeechRecognitionModel(object):
 
                 label, lengths = self._pad_label(label)
                 target_lengths = torch.from_numpy(np.array(lengths, dtype=np.int32))
+
+                if (np.sum(np.array(input_lengths) < np.array(target_lengths)) != 0):
+                    glog.info('continue {}/{}, processing ... {}/{}'.format(
+                        input_lengths, 
+                        target_lengths, 
+                        idx, 
+                        len(pbar)))
+                    continue
+
                 optimizer.zero_grad()
                 # print(lengths)
 
