@@ -114,6 +114,8 @@ class SpeechRecognitionModel(object):
         optimizer = torch.optim.SGD(model.parameters(), lr=lr, momentum=momentum)
         ctc_loss = torch.nn.CTCLoss()
 
+        scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, [1500, 4500], gamma=0.1)
+
         # torch.save(model.state_dict(), 'test_save')
 
         for step in range(epoch):
@@ -130,7 +132,7 @@ class SpeechRecognitionModel(object):
 
                 label, lengths = self._pad_label(label)
                 target_lengths = torch.from_numpy(np.array(lengths, dtype=np.int32))
-                optimizer.zero_grad()
+                scheduler.zero_grad()
                 # print(lengths)
 
                 input = torch.from_numpy(data).cuda()
@@ -143,7 +145,7 @@ class SpeechRecognitionModel(object):
                                 input_lengths.cuda(), 
                                 target_lengths.cuda())
                 loss.backward()
-                optimizer.step()
+                scheduler.step()
 
                 running_loss += loss.item()
 
