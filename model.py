@@ -132,7 +132,7 @@ class SpeechRecognitionModel(object):
 
                 label, lengths = self._pad_label(label)
                 target_lengths = torch.from_numpy(np.array(lengths, dtype=np.int32))
-                scheduler.zero_grad()
+                optimizer.zero_grad()
                 # print(lengths)
 
                 input = torch.from_numpy(data).cuda()
