@@ -212,9 +212,9 @@ class ResSpeech(torch.nn.Module):
 
 
 if __name__ == '__main__':
-    res_speech = ResSpeech()
+    res_speech = ResSpeech().cuda()
     while True:
-        x = torch.rand(32, 3, 16000 * 10 // 10, 32)
+        x = torch.rand(32, 3, 16000 * 10 // 10, 32).cuda()
         x = res_speech(x)
         print(x.cpu().detach().numpy().shape)
 
