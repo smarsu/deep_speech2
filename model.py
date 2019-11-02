@@ -156,6 +156,10 @@ class SpeechRecognitionModel(object):
 
                 # print(lengths)
 
+                if max(input_lengths) > 60:
+                    glog.info('continue {} > 60'.format(input_lengths))
+                    continue
+
                 if (np.sum(np.array(input_lengths) < np.array(target_lengths)) != 0):
                     glog.info('continue {}/{}, processing ... {}/{}'.format(
                         input_lengths, 
