@@ -178,7 +178,7 @@ def read_wav(wav_path):
 
 def get_frequency_feature_v2(wavsignal, framerate):
     wavsignal = wavsignal[0]
-    return wavsignal.reshape(-1, 100)
+    return wavsignal.reshape(-1, 64)
 
 
 def get_hamming_window(n, a):
