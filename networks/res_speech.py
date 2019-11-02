@@ -214,7 +214,7 @@ class ResSpeech(torch.nn.Module):
 if __name__ == '__main__':
     res_speech = ResSpeech()
     while True:
-        x = torch.rand(32, 32, 16000 * 10 // 10, 1)
+        x = torch.rand(32, 3, 16000 * 10 // 10, 32)
         x = res_speech(x)
         print(x.cpu().detach().numpy().shape)
 
