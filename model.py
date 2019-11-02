@@ -19,7 +19,7 @@ class SpeechRecognitionModel(object):
                  model, 
                  criterion,
                  model_name='deep_speech2'):
-        self.model = model
+        self.model = model.cuda()
         # self.criterion = criterion
         self._model_name = model_name
         pass
