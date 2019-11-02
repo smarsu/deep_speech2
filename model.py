@@ -44,7 +44,8 @@ class SpeechRecognitionModel(object):
             windows = process_voice.get_frequency_feature_v2(wavsignal, framerate)
             max_window_size = max(max_window_size, windows.shape[0])
             minibatch_windows.append(windows)
-            window_sizes.append(deep_speech2.calc_downsampled_t_length(windows.shape[0]))
+            # window_sizes.append(deep_speech2.calc_downsampled_t_length(windows.shape[0]))
+            window_sizes.append(windows.shape[0] // 32)
 
         minibatch_input = np.zeros(shape=[len(wav_paths), 
                                           max_window_size, 
