@@ -1,4 +1,5 @@
 import torch
+from torch import *
 # import torchvision
 
 
