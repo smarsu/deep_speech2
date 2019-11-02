@@ -160,8 +160,8 @@ def read_wav(wav_path):
     else:
         raise ValueError('The supported sampwidth in wav is 1 or 2, '
                             'get {}'.format(sampwidth))
-    frames = np.frombuffer(wav, dtype=dtype)
-    frames = frames.reshape(nframes, nchannels).T
+    frames = np.frombuffer(wav, dtype=np.int8)
+    frames = frames.reshape(nframes * sampwidth, nchannels).T
 
     # framerate, frames = scipy.io.wavfile.read(wav_path, False)
     # frames = frames.reshape(1, -1)
@@ -184,7 +184,7 @@ def read_wav(wav_path):
     return frames, framerate
 
 
-def get_frequency_feature_v2(wavsignal, framerate, feat_size=96):
+def get_frequency_feature_v2(wavsignal, framerate, feat_size=96 * 2):
     wavsignal = wavsignal[0]
     size = (len(wavsignal) + feat_size - 1) // feat_size * feat_size
     zeros = np.zeros(shape=[size,])
