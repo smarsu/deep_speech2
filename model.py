@@ -193,3 +193,20 @@ class SpeechRecognitionModel(object):
         print(preds)
         cer = character_error_rate.cer(preds, labels)
         glog.info('cer in dev set: {}'.format(cer))
+
+
+    def test(self, wav_path, params_path, id2word):
+        """Test with a wave file.
+        
+        Args:
+            wav_path: str.
+            params_path: str.
+        """
+        self.model.load_state_dict(torch.load(params_path))
+
+        data, _ = self._preprocess([wav_path])
+        predict = self.model(torch.from_numpy(data).cuda()).cpu().detach().numpy()
+        sequence = self._postprocess(predict)[0]
+
+        words = ''.join([id2word[id] for id in sequence])
+        glog.info('pred sequence: {}'.format(words))
