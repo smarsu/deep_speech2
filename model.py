@@ -34,6 +34,27 @@ class SpeechRecognitionModel(object):
     #     return np.ones([len(wav_paths), 1, 1000, 201], dtype=np.float32), [30] * len(wav_paths)
 
 
+    def _preprocess_v2(self, wav_paths):
+        """For res_speech."""
+        minibatch_windows = []
+        max_window_size = 0
+        window_sizes = []
+        for wav_path in wav_paths:
+            wavsignal, framerate = process_voice.read_wav_v2(wav_path)
+            windows = process_voice.get_frequency_feature_v2(wavsignal, framerate)
+            max_window_size = max(max_window_size, windows.shape[0])
+            minibatch_windows.append(windows)
+            window_sizes.append(deep_speech2.calc_downsampled_t_length(windows.shape[0]))
+
+        minibatch_input = np.zeros(shape=[len(wav_paths), 
+                                          max_window_size, 
+                                          minibatch_windows[0].shape[1]], dtype=np.float32)  # for simple, use 0 for pad.
+        for i in range(len(wav_paths)):  # TODO: pad both side.
+            minibatch_input[i:i+1, :len(minibatch_windows[i])] = minibatch_windows[i]
+        
+        return minibatch_input[:, np.newaxis, ...], window_sizes
+
+
     def _preprocess(self, wav_paths):
         """
         Args:
@@ -119,7 +140,7 @@ class SpeechRecognitionModel(object):
 
         for step in range(epoch):
             running_loss = 0.
-            pbar = dataset.train_datas(batch_size, 'train', limited_data_size=None)
+            pbar = dataset.train_datas(batch_size, 'train', limited_data_size=batch_size)
             # pbar = tqdm(dataset.train_datas(batch_size, 'train', limited_data_size=None))
             for idx, data_tuple in enumerate(pbar):
                 assert data_tuple.shape == (batch_size, 2)
