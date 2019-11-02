@@ -130,12 +130,12 @@ def read_wav(wav_path):
     frames = frames.reshape(1, -1)
     # print(frames)
 
-    framerate, frames = open_wav(wav_path)
-    frames = frames.T
-    # print(frames)
-    # print()
+    # framerate, frames = open_wav(wav_path)
+    # frames = frames.T
+    # # print(frames)
+    # # print()
 
-    assert np.sum(frames != frames) == 0
+    # assert np.sum(frames != frames) == 0
 
     # framerate = 16000
     # frames = np.ones(shape=[1, 16000 * 10])
