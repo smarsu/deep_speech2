@@ -178,6 +178,8 @@ def resnet50(pretrained=False, progress=True, **kwargs):
 
 class ResSpeech(torch.nn.Module):
     def __init__(self):
+        super().__init__()
+
         window_size = 25 # ms
         stride_size = 6 # ms
 
@@ -214,7 +216,7 @@ if __name__ == '__main__':
     while True:
         x = torch.rand(32, 1, 16000 * 10, 1)
         x = res_speech(x)
-        print(x.cpu().detach().numpy())
+        print(x.cpu().detach().numpy().shape)
 
 
         # target = torch.randint(low=1, high=1000, size=(32, 20))
