@@ -139,6 +139,7 @@ class SpeechRecognitionModel(object):
             self.model.load_state_dict(torch.load(params_path))
             glog.info('Load params ... {}'.format(params_path))
 
+        run_cnt = 0
         for step in range(epoch):
             running_loss = 0.
             pbar = dataset.train_datas(batch_size, 'train', limited_data_size=None)
@@ -185,11 +186,12 @@ class SpeechRecognitionModel(object):
                 optimizer.step()
 
                 running_loss += loss.item()
+                run_cnt += 1
 
                 # print(predict.cpu().detach().numpy())
                 # print(input_lengths.cpu().numpy())
                 # print(target_lengths.cpu().numpy())
-                glog.info('loss: {}, processing ... {}/{}'.format(running_loss / (idx + 1), idx, len(pbar)))
+                glog.info('loss: {}, processing ... {}/{}'.format(running_loss / run_cnt, idx, len(pbar)))
                 # print()
 
             torch.save(self.model.state_dict(), 
