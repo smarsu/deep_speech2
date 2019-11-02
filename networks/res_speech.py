@@ -14,6 +14,47 @@ def conv1x1(in_planes, out_planes, stride=1):
     return nn.Conv2d(in_planes, out_planes, kernel_size=1, stride=stride, bias=False)
 
 
+class BasicBlock(nn.Module):
+    expansion = 1
+    __constants__ = ['downsample']
+
+    def __init__(self, inplanes, planes, stride=1, downsample=None, groups=1,
+                 base_width=64, dilation=1, norm_layer=None):
+        super(BasicBlock, self).__init__()
+        if norm_layer is None:
+            norm_layer = nn.BatchNorm2d
+        if groups != 1 or base_width != 64:
+            raise ValueError('BasicBlock only supports groups=1 and base_width=64')
+        if dilation > 1:
+            raise NotImplementedError("Dilation > 1 not supported in BasicBlock")
+        # Both self.conv1 and self.downsample layers downsample the input when stride != 1
+        self.conv1 = conv3x3(inplanes, planes, stride)
+        self.bn1 = norm_layer(planes)
+        self.relu = nn.ReLU(inplace=True)
+        self.conv2 = conv3x3(planes, planes)
+        self.bn2 = norm_layer(planes)
+        self.downsample = downsample
+        self.stride = stride
+
+    def forward(self, x):
+        identity = x
+
+        out = self.conv1(x)
+        out = self.bn1(out)
+        out = self.relu(out)
+
+        out = self.conv2(out)
+        out = self.bn2(out)
+
+        if self.downsample is not None:
+            identity = self.downsample(x)
+
+        out += identity
+        out = self.relu(out)
+
+        return out
+
+
 class Bottleneck(torch.nn.Module):
     expansion = 4
     __constants__ = ['downsample']
@@ -178,6 +219,17 @@ def resnet50(pretrained=False, progress=True, **kwargs):
                    **kwargs)
 
 
+def resnet18(pretrained=False, progress=True, **kwargs):
+    r"""ResNet-18 model from
+    `"Deep Residual Learning for Image Recognition" <https://arxiv.org/pdf/1512.03385.pdf>`_
+    Args:
+        pretrained (bool): If True, returns a model pre-trained on ImageNet
+        progress (bool): If True, displays a progress bar of the download to stderr
+    """
+    return _resnet('resnet18', BasicBlock, [2, 2, 2, 2], pretrained, progress,
+                   **kwargs)
+
+
 class ResSpeech(torch.nn.Module):
     def __init__(self):
         super().__init__()
@@ -189,7 +241,7 @@ class ResSpeech(torch.nn.Module):
         #                                  out_channels=3,
         #                                  kernel_size=[1, 16 * window_size],  # 16 for 16kHz
         #                                  stride=[1, 16 * stride_size])  # input: [batch_size, time, freq, 1]
-        self.resnet50 = resnet50()
+        self.resnet = resnet18()
 
         self.gru = torch.nn.GRU(input_size=2048,
                                 hidden_size=1024,
@@ -203,7 +255,7 @@ class ResSpeech(torch.nn.Module):
     
     def forward(self, x):
         # x = self.firstconv(x)
-        x = self.resnet50(x)
+        x = self.resnet(x)
 
         x = torch.mean(x, -1)
         x = x.permute([0, 2, 1])
