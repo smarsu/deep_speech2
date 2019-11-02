@@ -110,12 +110,11 @@ class SpeechRecognitionModel(object):
             lr: float
             weight_decay: float
         """
-        model = deep_speech2.DeepSpeech2(201, 4231).cuda()
-        optimizer = torch.optim.SGD(model.parameters(), lr=lr, momentum=momentum)
+        optimizer = torch.optim.SGD(self.model.parameters(), lr=lr, momentum=momentum)
         ctc_loss = torch.nn.CTCLoss()
 
         if params_path:
-            model.load_state_dict(torch.load(params_path))
+            self.model.load_state_dict(torch.load(params_path))
             glog.info('Load params ... {}'.format(params_path))
 
         for step in range(epoch):
@@ -146,7 +145,7 @@ class SpeechRecognitionModel(object):
 
                 input = torch.from_numpy(data).cuda()
 
-                predict = model(input)
+                predict = self.model(input)
                 predict = predict.permute(1, 0, 2)
                 predict = predict.log_softmax(2)
                 loss = ctc_loss(predict, 
@@ -164,7 +163,7 @@ class SpeechRecognitionModel(object):
                 glog.info('loss: {}, processing ... {}/{}'.format(running_loss / (idx + 1), idx, len(pbar)))
                 # print()
 
-            torch.save(model.state_dict(), 
+            torch.save(self.model.state_dict(), 
                         'data/' + '-'.join([self._model_name, 
                                             str(lr), 
                                             str(step), 
