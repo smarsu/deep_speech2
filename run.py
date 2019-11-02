@@ -25,10 +25,10 @@ if __name__ == '__main__':
         aishell = datasets.Aishell(root)
         net = deep_speech2.DeepSpeech2(201, 4231)
         model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss)
-        model.value(aishell.train_datas(1, 'dev'), params_path='data/deep_speech2-0.1-16-2.45191401270209')
+        model.value(aishell.train_datas(1, 'dev'), params_path='data/deep_speech2-0.01-0-2.3161310894216753')
     elif parse == 'test':
         root = '/share/datasets/data_aishell'
         aishell = datasets.Aishell(root)
         net = deep_speech2.DeepSpeech2(201, 4231)
         model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss)
-        model.test(wav_path='test.wav', params_path='data/deep_speech2-0.1-16-2.45191401270209', id2word=aishell.id2word)
+        model.test(wav_path='test.wav', params_path='data/deep_speech2-0.01-0-2.3161310894216753', id2word=aishell.id2word)
