@@ -176,7 +176,7 @@ def resnet50(pretrained=False, progress=True, **kwargs):
                    **kwargs)
 
 
-class ResSpeech(object):
+class ResSpeech(torch.nn.Module):
     def __init__(self):
         window_size = 25 # ms
         stride_size = 6 # ms
