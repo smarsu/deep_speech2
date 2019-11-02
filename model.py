@@ -115,7 +115,7 @@ class SpeechRecognitionModel(object):
         ctc_loss = torch.nn.CTCLoss()
 
         if params_path:
-            self.model.load_state_dict(torch.load(params_path))
+            model.load_state_dict(torch.load(params_path))
             glog.info('Load params ... {}'.format(params_path))
 
         for step in range(epoch):
