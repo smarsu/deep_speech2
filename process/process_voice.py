@@ -178,7 +178,7 @@ def read_wav(wav_path):
 
 def get_frequency_feature_v2(wavsignal, framerate, feat_size=64):
     wavsignal = wavsignal[0]
-    wavsignal = [:len(wavsignal) // feat_size * feat_size]
+    wavsignal = wavsignal[:len(wavsignal) // feat_size * feat_size]
     return wavsignal.reshape(-1, feat_size)
 
 
