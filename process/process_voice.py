@@ -94,6 +94,35 @@ def open_wav(path):
     return wave_signal.framerate, wave_signal.data
 
 
+def read_wav_v2(wav_path):
+    """Read wav datas.
+    
+    Reference:
+        https://docs.python.org/3/library/wave.html
+
+    Fix the dtype to int8 for normalize.
+
+    Args:
+        wav_path: str. The path of wave file.
+
+    Returns:
+        frames: ndarray, np.int8 or np.int16, shape [nchannels, nframes * sampwidth]. The 
+            wav datas.
+        framerate: int. The sampling frequency.
+    """ 
+    with wave.open(wav_path, mode='rb') as fb:
+        nchannels, sampwidth, framerate, nframes, _, _ = fb.getparams()
+        # glog.info('Read {} ... nchannels: {}, sampwidth: {}, framerate: {}, '
+        #         'nframes: {}'.format(wav_path, nchannels, sampwidth, 
+        #         framerate, nframes))
+        wav = fb.readframes(nframes)
+
+        frames = np.frombuffer(wav, dtype=np.int8)
+        frames = frames.reshape(nframes * sampwidth, nchannels).T
+
+        return frames, framerate
+
+
 def read_wav(wav_path):
     """Read wav datas.
     
