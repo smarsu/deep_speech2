@@ -184,7 +184,7 @@ def read_wav(wav_path):
     return frames, framerate
 
 
-def get_frequency_feature_v2(wavsignal, framerate, feat_size=64):
+def get_frequency_feature_v2(wavsignal, framerate, feat_size=96):
     wavsignal = wavsignal[0]
     size = (len(wavsignal) + feat_size - 1) // feat_size * feat_size
     zeros = np.zeros(shape=[size,])

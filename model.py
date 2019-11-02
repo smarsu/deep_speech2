@@ -149,12 +149,12 @@ class SpeechRecognitionModel(object):
                 data, window_sizes = self._preprocess_v2(data)
                 label = data_tuple[:, 1]
                 input_lengths = torch.from_numpy(np.array(window_sizes, dtype=np.int32))
-                print(window_sizes)
+                # print(window_sizes)
 
                 label, lengths = self._pad_label(label)
                 target_lengths = torch.from_numpy(np.array(lengths, dtype=np.int32))
 
-                print(lengths)
+                # print(lengths)
 
                 if (np.sum(np.array(input_lengths) < np.array(target_lengths)) != 0):
                     glog.info('continue {}/{}, processing ... {}/{}'.format(
