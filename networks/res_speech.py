@@ -1,5 +1,5 @@
 import torch
-import torchvision
+# import torchvision
 
 
 class Bottleneck(torch.nn.Module):
