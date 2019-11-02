@@ -146,7 +146,7 @@ class SpeechRecognitionModel(object):
             for idx, data_tuple in enumerate(pbar):
                 assert data_tuple.shape == (batch_size, 2)
                 data = data_tuple[:, 0]
-                data, window_sizes = self._preprocess(data)
+                data, window_sizes = self._preprocess_v2(data)
                 label = data_tuple[:, 1]
                 input_lengths = torch.from_numpy(np.array(window_sizes, dtype=np.int32))
                 print(window_sizes)
