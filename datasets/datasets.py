@@ -146,8 +146,8 @@ class Aishell(Dataset):
 
         self._train_tuples = self._label_to_idx(self._train_tuples, self.word2id)
         # Word may not in dev and test set.
-        # self._dev_tuples = self._label_to_idx(self._dev_tuples, self.word2id)
-        # self._test_tuples = self._label_to_idx(self._test_tuples, self.word2id)
+        self._dev_tuples = self._label_to_idx(self._dev_tuples, self.word2id)
+        self._test_tuples = self._label_to_idx(self._test_tuples, self.word2id)
 
 
     def _get_label_path(self, root):
@@ -236,7 +236,7 @@ class Aishell(Dataset):
         """
         for idx, tup in enumerate(data_tuples):
             tup = list(tup)
-            tup[1] = [word2id[word] for word in tup[1]]
+            tup[1] = [word2id[word] for word in tup[1] if word in word2id]  # word may not in word2id 
             data_tuples[idx] = tuple(tup)
         return data_tuples
 
