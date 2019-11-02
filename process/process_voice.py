@@ -117,8 +117,16 @@ def read_wav_v2(wav_path):
         #         framerate, nframes))
         wav = fb.readframes(nframes)
 
-        frames = np.frombuffer(wav, dtype=np.int8)
-        frames = frames.reshape(nframes * sampwidth, nchannels).T
+        if sampwidth == 1:
+            dtype = np.int8
+        elif sampwidth == 2:
+            dtype = np.int16
+        else:
+            raise ValueError('The supported sampwidth in wav is 1 or 2, '
+                                'get {}'.format(sampwidth))
+
+        frames = np.frombuffer(wav, dtype=dtype)
+        frames = frames.reshape(nframes, nchannels).T
 
         return frames, framerate
 
@@ -176,7 +184,7 @@ def read_wav(wav_path):
     return frames, framerate
 
 
-def get_frequency_feature_v2(wavsignal, framerate, feat_size=192):
+def get_frequency_feature_v2(wavsignal, framerate, feat_size=128):
     wavsignal = wavsignal[0]
     size = (len(wavsignal) + feat_size - 1) // feat_size * feat_size
     zeros = np.zeros(shape=[size,])
