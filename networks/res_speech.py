@@ -1,5 +1,6 @@
 import torch
 from torch import *
+import torch.nn as nn
 # import torchvision
 
 
