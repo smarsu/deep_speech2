@@ -173,7 +173,7 @@ class ResSpeech(object):
                                          out_channels=3,
                                          kernel_size=[16 * window_size, 16 * window_size],  # 16 for 16kHz
                                          stride=[16 * stride_size, 16 * stride_size])  # input: [batch_size, time, freq, 1]
-        self.resnet50 = torchvision.models.resnet50()
+        self.resnet50 = resnet50()
 
         self.gru = torch.nn.GRU(input_size=2048,
                                 hidden_size=1024,
