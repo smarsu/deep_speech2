@@ -141,7 +141,7 @@ class SpeechRecognitionModel(object):
 
         for step in range(epoch):
             running_loss = 0.
-            pbar = dataset.train_datas(batch_size, 'train', limited_data_size=batch_size)
+            pbar = dataset.train_datas(batch_size, 'train', limited_data_size=batch_size * 10)
             # pbar = tqdm(dataset.train_datas(batch_size, 'train', limited_data_size=None))
             for idx, data_tuple in enumerate(pbar):
                 assert data_tuple.shape == (batch_size, 2)
