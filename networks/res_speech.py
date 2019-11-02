@@ -108,6 +108,7 @@ class ResNet(torch.nn.Module):
         if norm_layer is None:
             norm_layer = nn.BatchNorm2d
         self._norm_layer = norm_layer
+        self.block = block
 
         self.inplanes = 64
         self.dilation = 1
@@ -243,7 +244,7 @@ class ResSpeech(torch.nn.Module):
         #                                  stride=[1, 16 * stride_size])  # input: [batch_size, time, freq, 1]
         self.resnet = resnet18()
 
-        self.gru = torch.nn.GRU(input_size=2048,
+        self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion,
                                 hidden_size=1024,
                                 num_layers=1,
                                 batch_first=True,
