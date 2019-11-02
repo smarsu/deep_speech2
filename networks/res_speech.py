@@ -194,7 +194,7 @@ class ResSpeech(object):
                                 dropout=0,
                                 bidirectional=True)
 
-        self.fc = torch.nn.Linear(2 * 1024, self.vocab_size)
+        self.fc = torch.nn.Linear(2 * 1024, 4231)
 
     
     def forward(self, x):
