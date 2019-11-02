@@ -167,6 +167,8 @@ class SpeechRecognitionModel(object):
                 optimizer.zero_grad()
 
                 input = torch.from_numpy(data).cuda()
+                
+                input = input / 127.5 - 1
 
                 predict = self.model(input)
                 predict = predict.permute(1, 0, 2)
