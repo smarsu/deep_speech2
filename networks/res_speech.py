@@ -183,10 +183,10 @@ class ResSpeech(torch.nn.Module):
         window_size = 25 # ms
         stride_size = 6 # ms
 
-        self.firstconv = torch.nn.Conv2d(in_channels=1, 
-                                         out_channels=3,
-                                         kernel_size=[1, 16 * window_size],  # 16 for 16kHz
-                                         stride=[1, 16 * stride_size])  # input: [batch_size, time, freq, 1]
+        # self.firstconv = torch.nn.Conv2d(in_channels=1, 
+        #                                  out_channels=3,
+        #                                  kernel_size=[1, 16 * window_size],  # 16 for 16kHz
+        #                                  stride=[1, 16 * stride_size])  # input: [batch_size, time, freq, 1]
         self.resnet50 = resnet50()
 
         self.gru = torch.nn.GRU(input_size=2048,
@@ -200,7 +200,7 @@ class ResSpeech(torch.nn.Module):
 
     
     def forward(self, x):
-        x = self.firstconv(x)
+        # x = self.firstconv(x)
         x = self.resnet50(x)
 
         x = torch.squeeze(x)
@@ -214,7 +214,7 @@ class ResSpeech(torch.nn.Module):
 if __name__ == '__main__':
     res_speech = ResSpeech()
     while True:
-        x = torch.rand(32, 1, 16000 * 10, 1)
+        x = torch.rand(32, 32, 16000 * 10 / 10, 1)
         x = res_speech(x)
         print(x.cpu().detach().numpy().shape)
 
