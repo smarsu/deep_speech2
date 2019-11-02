@@ -205,9 +205,8 @@ class ResSpeech(torch.nn.Module):
         # x = self.firstconv(x)
         x = self.resnet50(x)
 
-        batch, feat, time, freq = list(x.shape)
-        x = x.permute([0, 2, 3, 1])
-        x = torch.reshape(x, [batch, time, freq * feat])
+        x = torch.mean(x, -1)
+        x = x.permute([0, 2, 1])
 
         x = self.gru(x)
         x = self.fc(x[0])
@@ -218,7 +217,7 @@ class ResSpeech(torch.nn.Module):
 if __name__ == '__main__':
     res_speech = ResSpeech().cuda()
     while True:
-        x = torch.rand(32, 1, 16000 * 10 // 100, 32).cuda()
+        x = torch.rand(32, 201, 16000 * 10 // 100, 32).cuda()
         x = res_speech(x)
         print(x.cpu().detach().numpy().shape)
 

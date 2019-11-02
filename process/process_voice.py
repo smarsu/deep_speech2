@@ -190,7 +190,7 @@ def get_hamming_window(n, a):
     return (1 - a) - a * np.cos(2 * np.pi * np.arange(n) / (n - 1))
 
 
-def get_frequency_feature(wavsignal, framerate):
+def get_frequency_feature(wavsignal, framerate, time_window=25, time_stride=10):
     """Get the fft feature of wav signal.
     
     Reference:
