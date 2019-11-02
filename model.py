@@ -101,7 +101,7 @@ class SpeechRecognitionModel(object):
         return labels, lengths
 
     
-    def train(self, dataset, epoch, batch_size, lr=0.1, momentum=0.9, weight_decay=4e-5):
+    def train(self, dataset, epoch, batch_size, lr=0.1, momentum=0.9, weight_decay=4e-5, params_path=None):
         """
         Args:
             dataser: The object of Dataset. We use the train_datas function 
@@ -114,7 +114,9 @@ class SpeechRecognitionModel(object):
         optimizer = torch.optim.SGD(model.parameters(), lr=lr, momentum=momentum)
         ctc_loss = torch.nn.CTCLoss()
 
-        # torch.save(model.state_dict(), 'test_save')
+        if params_path:
+            self.model.load_state_dict(torch.load(params_path))
+            glog.info('Load params ... {}'.format(params_path))
 
         for step in range(epoch):
             running_loss = 0.
