@@ -203,7 +203,9 @@ class ResSpeech(torch.nn.Module):
         # x = self.firstconv(x)
         x = self.resnet50(x)
 
-        x = torch.squeeze(x)
+        batch, feat, time, freq = list(x.shape)
+        x = x.permute([0, 2, 3, 1])
+        x = torch.reshape(x, [batch, time, freq * feat])
 
         x = self.gru(x)
         x = self.fc(x[0])
