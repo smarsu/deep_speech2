@@ -169,12 +169,14 @@ class SpeechRecognitionModel(object):
                                             str(running_loss / (idx + 1))]))
 
 
-    def value(self, data_tuples):
+    def value(self, data_tuples, params_path):
         """Value the performance on dev datasets.
         
         Args:
             data_tuples: list of tuple, shape [N, b, 2], [(data, label), ...].
         """
+        self.model.load_state_dict(torch.load(params_path))
+
         preds = []
         labels = []
         for data_tuple in data_tuples:
