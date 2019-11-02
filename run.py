@@ -31,4 +31,4 @@ if __name__ == '__main__':
         aishell = datasets.Aishell(root)
         net = deep_speech2.DeepSpeech2(201, 4231)
         model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss)
-        mode.test(wav_path='test.wav', params_path='data/deep_speech2-0.1-16-2.45191401270209')
+        model.test(wav_path='test.wav', params_path='data/deep_speech2-0.1-16-2.45191401270209', id2word=aishell.id2word)
