@@ -157,12 +157,12 @@ class SpeechRecognitionModel(object):
                 data, window_sizes = self._preprocess(data)
                 label = data_tuple[:, 1]
                 input_lengths = torch.from_numpy(np.array(window_sizes, dtype=np.int32))
-                # print(window_sizes)
+                print(window_sizes)
 
                 label, lengths = self._pad_label(label)
                 target_lengths = torch.from_numpy(np.array(lengths, dtype=np.int32))
 
-                # print(lengths)
+                print(lengths)
 
                 # if max(input_lengths) > 40:
                 #     glog.info('continue {} > 40'.format(input_lengths))
@@ -180,7 +180,7 @@ class SpeechRecognitionModel(object):
 
                 t2 = time.time()
 
-                print(data)
+                # print(data)
 
                 input = torch.from_numpy(data).cuda()
                 
