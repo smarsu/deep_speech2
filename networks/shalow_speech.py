@@ -21,6 +21,8 @@ class ShallowSpeech(torch.nn.Module):
 
 
     def forward(self, x):
+        x = x.permute([0, 3, 1, 2])
+
         for _ in range(5):
             x = self.conv(x)
 
