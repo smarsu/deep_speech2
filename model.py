@@ -46,6 +46,7 @@ class SpeechRecognitionModel(object):
             max_window_size = max(max_window_size, windows.shape[0])
             minibatch_windows.append(windows)
             # window_sizes.append(deep_speech2.calc_downsampled_t_length(windows.shape[0]))
+            # Warning: The right the window_sizes, the quick the loss get down.
             window_sizes.append(self.model.calc_t_length(windows.shape[0]))  # t // 32
 
         minibatch_input = np.zeros(shape=[len(wav_paths), 
@@ -140,9 +141,9 @@ class SpeechRecognitionModel(object):
             self.model.load_state_dict(torch.load(params_path))
             glog.info('Load params ... {}'.format(params_path))
 
-        run_cnt = 0
         for step in range(epoch):
             running_loss = 0.
+            run_cnt = 0
             pbar = dataset.train_datas(batch_size, 'train', limited_data_size=None)
             # pbar = tqdm(dataset.train_datas(batch_size, 'train', limited_data_size=None))
             for idx, data_tuple in enumerate(pbar):
@@ -224,7 +225,7 @@ class SpeechRecognitionModel(object):
             data = data_tuple[:, 0]
             label = data_tuple[:, 1]
             data, _ = self._preprocess(data)
-            predict = self.model(torch.from_numpy(data).cuda()).cpu().detach().numpy()
+            predict = self.model.cup()(torch.from_numpy(data).cpu()).cpu().detach().numpy()
             sequence = self._postprocess(predict)
             preds.extend(sequence)
             labels.extend(label)
