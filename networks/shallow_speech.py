@@ -38,6 +38,8 @@ class ShallowSpeech(torch.nn.Module):
         # x = x.permute([0, 3, 1, 2])
 
         x = self.firstconv(x)
+        x = self.batch_norm(x)
+        x = torch.relu(x)
         for _ in range(3):
             x = self.conv(x)
             x = self.batch_norm(x)
