@@ -147,9 +147,9 @@ def read_wav(wav_path):
     """
     fb = wave.open(wav_path, mode='rb')
     nchannels, sampwidth, framerate, nframes, _, _ = fb.getparams()
-    glog.info('Read {} ... nchannels: {}, sampwidth: {}, framerate: {}, '
-              'nframes: {}'.format(wav_path, nchannels, sampwidth, 
-              framerate, nframes))
+    # glog.info('Read {} ... nchannels: {}, sampwidth: {}, framerate: {}, '
+    #           'nframes: {}'.format(wav_path, nchannels, sampwidth, 
+    #           framerate, nframes))
     wav = fb.readframes(nframes)
     fb.close()
 
