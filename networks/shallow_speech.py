@@ -22,6 +22,12 @@ class ShallowSpeech(torch.nn.Module):
 
         self.fc = torch.nn.Linear(2 * 96, 4231)
 
+    
+    def calc_t_length(self, t):
+        for _ in range(5):
+            t = (t + 2 * 1 - 2 - 1) / 2 + 1
+        return t
+
 
     def forward(self, x):
         x = x.permute([0, 3, 1, 2])
