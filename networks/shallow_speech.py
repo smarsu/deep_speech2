@@ -10,6 +10,8 @@ class ShallowSpeech(torch.nn.Module):
                                     kernel_size=[1, 3],
                                     stride=[1, 2],
                                     padding=[0, 1])
+        self.batch_norm = torch.nn.BatchNorm2d(num_features=96*2)
+
 
         self.gru = torch.nn.GRU(input_size=96 * 2,
                                 hidden_size=96,
@@ -26,6 +28,8 @@ class ShallowSpeech(torch.nn.Module):
 
         for _ in range(5):
             x = self.conv(x)
+            x = self.batch_norm(x)
+            x = torch.relu(x)
 
         x = torch.squeeze(x)  # [32, 92 * 2, 16000 * 10 * 2 // 96 // 2]
         x = x.permute([0, 2, 1])
