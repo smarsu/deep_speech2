@@ -139,7 +139,7 @@ class SpeechRecognitionModel(object):
             weight_decay: float
         """
         optimizer = torch.optim.SGD(self.model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
-        ctc_loss = torch.nn.CTCLoss()
+        ctc_loss = torch.nn.CTCLoss(reduction='none')
 
         if params_path:
             self.model.load_state_dict(torch.load(params_path))
