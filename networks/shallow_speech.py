@@ -18,7 +18,6 @@ class ShallowSpeech(torch.nn.Module):
     def forward(self, x):
         x = self.gru(x)
         x = self.fc(x[0])
-        return x
 
 
 if __name__ == '__main__':
