@@ -2,43 +2,51 @@ import torch
 
 
 class ShallowSpeech(torch.nn.Module):
-    def __init__(self):
+    def __init__(self, freq_size=201):
         super().__init__()
 
-        self.conv = torch.nn.Conv2d(in_channels=96*2,
-                                    out_channels=96*2,
-                                    kernel_size=[1, 3],
-                                    stride=[1, 2],
-                                    padding=[0, 1])
-        self.batch_norm = torch.nn.BatchNorm2d(num_features=96*2)
+        self.firstconv = torch.nn.Conv2d(in_channels=1,
+                                    out_channels=32,
+                                    kernel_size=[3, 3],
+                                    stride=[2, 2],
+                                    padding=[1, 1])
 
+        self.conv = torch.nn.Conv2d(in_channels=32,
+                                    out_channels=32,
+                                    kernel_size=[3, 3],
+                                    stride=[2, 2],
+                                    padding=[1, 1])
+        self.batch_norm = torch.nn.BatchNorm2d(num_features=32)
 
-        self.gru = torch.nn.GRU(input_size=96 * 2,
-                                hidden_size=96,
+        self.gru = torch.nn.GRU(input_size=32*self.calc_t_length(freq_size),
+                                hidden_size=1024,
                                 num_layers=1,
                                 batch_first=True,
                                 dropout=0,
                                 bidirectional=True)
 
-        self.fc = torch.nn.Linear(2 * 96, 4231)
+        self.fc = torch.nn.Linear(2 * 1024, 4231)
 
     
     def calc_t_length(self, t):
-        for _ in range(5):
+        for _ in range(4):
             t = (t + 2 * 1 - 2 - 1) / 2 + 1
         return t
 
 
     def forward(self, x):
-        x = x.permute([0, 3, 1, 2])
+        # x = x.permute([0, 3, 1, 2])
 
-        for _ in range(5):
+        x = self.firstconv(x)
+        for _ in range(3):
             x = self.conv(x)
             x = self.batch_norm(x)
             x = torch.relu(x)
 
-        x = torch.squeeze(x, 2)  # [32, 92 * 2, 16000 * 10 * 2 // 96 // 2]
-        x = x.permute([0, 2, 1])
+        batch, feat, time, freq = list(x.shape)
+        # x = torch.squeeze(x, 2)  # [32, 92 * 2, 16000 * 10 * 2 // 96 // 2]
+        x = x.permute([0, 2, 1, 3])
+        x = x.reshape(batch, time, feat * freq)
 
         x = self.gru(x)
         x = self.fc(x[0])
