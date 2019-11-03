@@ -221,7 +221,7 @@ class SpeechRecognitionModel(object):
         Args:
             data_tuples: list of tuple, shape [N, b, 2], [(data, label), ...].
         """
-        self.model.load_state_dict(torch.load(params_path).cpu())
+        self.model.cpu().load_state_dict(torch.load(params_path).cpu())
 
         preds = []
         labels = []
