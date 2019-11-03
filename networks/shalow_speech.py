@@ -5,7 +5,7 @@ class ShallowSpeech(torch.nn.Module):
     def __init__(self):
         super().__init__()
 
-        self.conv = torch.nn.Conv2d(inchannels=96*2,
+        self.conv = torch.nn.Conv2d(in_channels=96*2,
                                     out_channels=96*2,
                                     kernel_size=[1, 3],
                                     stride=[1, 2])
