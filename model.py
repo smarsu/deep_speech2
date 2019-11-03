@@ -19,8 +19,12 @@ class SpeechRecognitionModel(object):
     def __init__(self, 
                  model, 
                  criterion,
-                 model_name='deep_speech2'):
-        self.model = model.cuda()
+                 model_name='deep_speech2',
+                 device='gpu'):
+        if device == 'gpu':
+            self.model = model.cuda()
+        elif device == 'cpu':
+            self.model = model.cpu()
         # self.criterion = criterion
         self._model_name = model_name
         pass
