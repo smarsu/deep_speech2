@@ -243,7 +243,8 @@ def get_frequency_feature(wavsignal, framerate, time_window=25, time_stride=10):
         window = scipy.fftpack.fft(window)
         window = window[:window_size//2+1]  # As the fft data is symmetrical, just choose half.
 
-        window = np.abs(window) / wav_length  # TODO: Why divide wav_length
+        # window = np.abs(window) / wav_length  # TODO: Why divide wav_length
+        window = np.abs(window)
         window = np.log(window + 1)  # Will the hardware work well with the feature size (201)?
 
         windows.append(window)
