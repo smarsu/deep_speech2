@@ -18,7 +18,7 @@ if __name__ == '__main__':
         aishell = datasets.Aishell(root)
         # net = deep_speech2.DeepSpeech2(201, 4231)
         # net = res_speech.ResSpeech()
-        new = shallow_speech.ShallowSpeech()
+        net = shallow_speech.ShallowSpeech()
         model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss, model_name='res_speech')
         # model.train(aishell, epoch=1000000, batch_size=32, lr=0.1)  # 18
         model.train(aishell, epoch=1000000, batch_size=32, lr=0.1, params_path=None)
