@@ -2,6 +2,7 @@
 
 """Main for train, test and value."""
 
+import time
 import os.path as osp
 import glog
 from tqdm import tqdm
