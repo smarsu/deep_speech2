@@ -145,6 +145,7 @@ class SpeechRecognitionModel(object):
             pbar = dataset.train_datas(batch_size, 'train', limited_data_size=None)
             # pbar = tqdm(dataset.train_datas(batch_size, 'train', limited_data_size=None))
             for idx, data_tuple in enumerate(pbar):
+                t1 = time.time()
                 assert data_tuple.shape == (batch_size, 2)
                 data = data_tuple[:, 0]
                 data, window_sizes = self._preprocess_v2(data)
@@ -171,6 +172,8 @@ class SpeechRecognitionModel(object):
 
                 optimizer.zero_grad()
 
+                t2 = time.time()
+
                 # print(data)
 
                 input = torch.from_numpy(data).cuda()
@@ -190,10 +193,13 @@ class SpeechRecognitionModel(object):
                 running_loss += loss.item()
                 run_cnt += 1
 
+                t3 = time.time()
+
                 # print(predict.cpu().detach().numpy())
                 # print(input_lengths.cpu().numpy())
                 # print(target_lengths.cpu().numpy())
-                glog.info('loss: {}, processing ... {}/{}'.format(running_loss / run_cnt, idx, len(pbar)))
+                glog.info('loss: {}, processing ... {}/{}, tpre: {}, tmodel: {}'.format(
+                    running_loss / run_cnt, idx, len(pbar), t2 - t1, t3 - t2))
                 # print()
 
             torch.save(self.model.state_dict(), 
