@@ -30,7 +30,7 @@ class ShallowSpeech(torch.nn.Module):
     
     def calc_t_length(self, t):
         for _ in range(4):
-            t = (t + 2 * 1 - 2 - 1) / 2 + 1
+            t = (t + 2 * 1 - 2 - 1) // 2 + 1
         return t
 
 
