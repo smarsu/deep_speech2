@@ -37,7 +37,7 @@ class ShallowSpeech(torch.nn.Module):
             x = self.batch_norm(x)
             x = torch.relu(x)
 
-        x = torch.squeeze(x)  # [32, 92 * 2, 16000 * 10 * 2 // 96 // 2]
+        x = torch.squeeze(x, 2)  # [32, 92 * 2, 16000 * 10 * 2 // 96 // 2]
         x = x.permute([0, 2, 1])
 
         x = self.gru(x)
