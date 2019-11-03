@@ -37,6 +37,6 @@ class ShallowSpeech(torch.nn.Module):
 if __name__ == '__main__':
     shallow_speech = ShallowSpeech().cuda()
     while True:
-        x = torch.rand(32, 96 * 2, 1, 16000 * 10 * 2 // 96 // 2).cuda()
+        x = torch.rand(32, 1, 16000 * 10 * 2 // 96 // 2, 96 * 2).cuda()
         x = shallow_speech(x)
         print(x.cpu().detach().numpy().shape)
