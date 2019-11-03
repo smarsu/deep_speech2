@@ -8,7 +8,8 @@ class ShallowSpeech(torch.nn.Module):
         self.conv = torch.nn.Conv2d(in_channels=96*2,
                                     out_channels=96*2,
                                     kernel_size=[1, 3],
-                                    stride=[1, 2])
+                                    stride=[1, 2],
+                                    pad=[0, 1])
 
         self.gru = torch.nn.GRU(input_size=96 * 2,
                                 hidden_size=96,
