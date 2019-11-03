@@ -171,6 +171,8 @@ class SpeechRecognitionModel(object):
 
                 optimizer.zero_grad()
 
+                print(data)
+
                 input = torch.from_numpy(data).cuda()
                 
                 input = input / 127
