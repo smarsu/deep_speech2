@@ -229,8 +229,8 @@ def get_frequency_feature(wavsignal, framerate, time_window=25, time_stride=10):
     wavsignal = wavsignal[0]
     wav_length = len(wavsignal)
 
-    time_window = 25  # ms
-    time_stride = 10  # ms
+    # time_window = 25  # ms
+    # time_stride = 10  # ms
     window_size = framerate // 1000 * time_window
     window_stride = framerate // 1000 * time_stride
 

@@ -19,17 +19,17 @@ class ShallowSpeech(torch.nn.Module):
         self.batch_norm = torch.nn.BatchNorm2d(num_features=32)
 
         self.gru = torch.nn.GRU(input_size=32*self.calc_t_length(freq_size),
-                                hidden_size=512,
+                                hidden_size=1024,
                                 num_layers=1,
                                 batch_first=True,
                                 dropout=0,
                                 bidirectional=True)
 
-        self.fc = torch.nn.Linear(2 * 512, 4231)
+        self.fc = torch.nn.Linear(2 * 1024, 4231)
 
     
     def calc_t_length(self, t):
-        for _ in range(4):
+        for _ in range(3):
             t = (t + 2 * 1 - 2 - 1) // 2 + 1
         return t
 
@@ -40,7 +40,7 @@ class ShallowSpeech(torch.nn.Module):
         x = self.firstconv(x)
         x = self.batch_norm(x)
         x = torch.relu(x)
-        for _ in range(3):
+        for _ in range(2):
             x = self.conv(x)
             x = self.batch_norm(x)
             x = torch.relu(x)

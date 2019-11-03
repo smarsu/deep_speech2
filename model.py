@@ -75,7 +75,7 @@ class SpeechRecognitionModel(object):
         window_sizes = []
         for wav_path in wav_paths:
             wavsignal, framerate = process_voice.read_wav(wav_path)
-            windows = process_voice.get_frequency_feature(wavsignal, framerate)
+            windows = process_voice.get_frequency_feature(wavsignal, framerate, time_stride=20)
             max_window_size = max(max_window_size, windows.shape[0])
             minibatch_windows.append(windows)
             window_sizes.append(self.model.calc_t_length(windows.shape[0]))
