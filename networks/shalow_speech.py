@@ -25,7 +25,7 @@ class ShallowSpeech(torch.nn.Module):
             x = self.conv(x)
 
         x = torch.squeeze(x)  # [32, 92 * 2, 16000 * 10 * 2 // 96 // 2]
-        x = torch.transpose(x, [0, 2, 1])
+        x = x.permute([0, 2, 1])
 
         x = self.gru(x)
         x = self.fc(x[0])
