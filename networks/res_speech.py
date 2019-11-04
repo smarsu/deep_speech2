@@ -248,7 +248,7 @@ class ResSpeech(torch.nn.Module):
 
         self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion,
                                 hidden_size=1024,
-                                num_layers=1,
+                                num_layers=2,
                                 batch_first=True,
                                 dropout=0,
                                 bidirectional=True)
