@@ -234,7 +234,7 @@ def resnet18(pretrained=False, progress=True, **kwargs):
 
 
 class ResSpeech(torch.nn.Module):
-    def __init__(self):
+    def __init__(self, freq_size=201):
         super().__init__()
 
         window_size = 25 # ms
@@ -246,14 +246,14 @@ class ResSpeech(torch.nn.Module):
         #                                  stride=[1, 16 * stride_size])  # input: [batch_size, time, freq, 1]
         self.resnet = resnet18()
 
-        self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion,
-                                hidden_size=256,
+        self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion * self.calc_t_length(freq_size),
+                                hidden_size=1024,
                                 num_layers=1,
                                 batch_first=True,
                                 dropout=0,
                                 bidirectional=True)
 
-        self.fc = torch.nn.Linear(2 * 256, 4231)
+        self.fc = torch.nn.Linear(2 * 1024, 4231)
 
     
     def calc_t_length(self, t):
@@ -261,14 +261,20 @@ class ResSpeech(torch.nn.Module):
 
     
     def forward(self, x):
-        # x = self.firstconv(x)
         x = self.resnet(x)
 
-        x = torch.mean(x, -1)  # use mean for not compute width.
-        x = x.permute([0, 2, 1])
+        batch, feat, time, freq = list(x.shape)
+        x = x.permute([0, 2, 3, 1])
+        x = torch.reshape(x, [batch, time, freq * feat])
 
         x = self.gru(x)
         x = self.fc(x[0])
+
+        # x = torch.mean(x, -1)  # use mean for not compute width.
+        # x = x.permute([0, 2, 1])
+
+        # x = self.gru(x)
+        # x = self.fc(x[0])
 
         return x
 
