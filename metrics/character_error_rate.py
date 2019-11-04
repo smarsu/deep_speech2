@@ -22,7 +22,6 @@ def min_edit_distance(predict, label):
     label = [' '] + list(label)
     print(predict)
     print(label)
-    print()
     dp = [[0] * len(predict) for _ in range(len(label))]
     for i in range(len(predict)):
         dp[0][i] = i
@@ -48,6 +47,8 @@ def sentence_cer(predict, label):
     Return:
         cer: float.
     """
+    print(min_edit_distance(predict, label) / len(label))
+    print()
     return min_edit_distance(predict, label) / len(label)
 
 
