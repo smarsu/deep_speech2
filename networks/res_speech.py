@@ -254,6 +254,10 @@ class ResSpeech(torch.nn.Module):
         self.fc = torch.nn.Linear(2 * 256, 4231)
 
     
+    def calc_t_length(self, t):
+        return t // 32
+
+    
     def forward(self, x):
         # x = self.firstconv(x)
         x = self.resnet(x)
