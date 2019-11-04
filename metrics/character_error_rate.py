@@ -47,10 +47,11 @@ def sentence_cer(predict, label):
     Return:
         cer: float.
     """
-    print(min_edit_distance(predict, label) / len(label))
+    cer = min_edit_distance(predict, label) / len(label)
+    print(cer)
     print()
-    return min_edit_distance(predict, label) / len(label)
-
+    return cer
+    
 
 def cer(predicts, labels):
     """Compute the character error rate per corpu.
