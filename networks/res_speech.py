@@ -1,7 +1,6 @@
 import torch
 from torch import *
 import torch.nn as nn
-import math
 # import torchvision
 
 def conv3x3(in_planes, out_planes, stride=1, groups=1, dilation=1):
@@ -235,7 +234,7 @@ def resnet18(pretrained=False, progress=True, **kwargs):
 
 
 class ResSpeech(torch.nn.Module):
-    def __init__(self, freq_size=201):
+    def __init__(self):
         super().__init__()
 
         window_size = 25 # ms
@@ -247,35 +246,29 @@ class ResSpeech(torch.nn.Module):
         #                                  stride=[1, 16 * stride_size])  # input: [batch_size, time, freq, 1]
         self.resnet = resnet18()
 
-        self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion * self.calc_t_length(freq_size),
-                                hidden_size=1024,
+        self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion,
+                                hidden_size=256,
                                 num_layers=1,
                                 batch_first=True,
                                 dropout=0,
                                 bidirectional=True)
 
-        self.fc = torch.nn.Linear(2 * 1024, 4231)
+        self.fc = torch.nn.Linear(2 * 256, 4231)
 
     
     def calc_t_length(self, t):
-        return math.ceil(t / 16)
+        return t // 16
 
     
     def forward(self, x):
+        # x = self.firstconv(x)
         x = self.resnet(x)
 
-        batch, feat, time, freq = list(x.shape)
-        x = x.permute([0, 2, 3, 1])
-        x = torch.reshape(x, [batch, time, freq * feat])
+        x = torch.mean(x, -1)  # use mean for not compute
+        x = x.permute([0, 2, 1])
 
         x = self.gru(x)
         x = self.fc(x[0])
-
-        # x = torch.mean(x, -1)  # use mean for not compute width.
-        # x = x.permute([0, 2, 1])
-
-        # x = self.gru(x)
-        # x = self.fc(x[0])
 
         return x
 
