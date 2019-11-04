@@ -248,6 +248,7 @@ class SpeechRecognitionModel(object):
             wav_path: str.
             params_path: str.
         """
+        self.model = self.model.eval()
         self.model.load_state_dict(torch.load(params_path))
 
         data, _ = self._preprocess([wav_path])
