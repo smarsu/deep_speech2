@@ -20,7 +20,7 @@ if __name__ == '__main__':
         net = res_speech.ResSpeech()
         # net = shallow_speech.ShallowSpeech()
         model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss, model_name='res_speech')
-        model.train(aishell, epoch=1000000, batch_size=32, lr=0.1, params_path=None)
+        model.train(aishell, epoch=1000000, batch_size=32, lr=0.1, momentum=0., params_path=None)
         # model.train(aishell, epoch=1000000, batch_size=32, lr=0.01, weight_decay=0., params_path='data/deep_speech2-0.01-2-2.339809679362477')  # 18
         # model.train(aishell, epoch=1000000, batch_size=32, lr=0.1 / 32, momentum=0., weight_decay=0., params_path=None)
     elif parse == 'value':
