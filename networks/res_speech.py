@@ -1,6 +1,7 @@
 import torch
 from torch import *
 import torch.nn as nn
+import math
 # import torchvision
 
 def conv3x3(in_planes, out_planes, stride=1, groups=1, dilation=1):
@@ -257,7 +258,7 @@ class ResSpeech(torch.nn.Module):
 
     
     def calc_t_length(self, t):
-        return t // 16
+        return math.ceil(t / 16)
 
     
     def forward(self, x):
