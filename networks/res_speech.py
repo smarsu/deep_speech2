@@ -257,7 +257,7 @@ class ResSpeech(torch.nn.Module):
 
     
     def calc_t_length(self, t):
-        return t // 32
+        return t // 16
 
     
     def forward(self, x):
