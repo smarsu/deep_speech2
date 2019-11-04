@@ -264,7 +264,7 @@ class ResSpeech(torch.nn.Module):
         # x = self.firstconv(x)
         x = self.resnet(x)
 
-        x = torch.mean(x, -1)
+        x = torch.mean(x, -1)  # use mean for not compute width.
         x = x.permute([0, 2, 1])
 
         x = self.gru(x)
