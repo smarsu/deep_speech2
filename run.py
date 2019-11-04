@@ -27,8 +27,8 @@ if __name__ == '__main__':
         aishell = datasets.Aishell(root)
         # net = deep_speech2.DeepSpeech2(201, 4231)
         net = shallow_speech.ShallowSpeech()
-        model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss, device='cpu')
-        model.value(aishell.train_datas(1, 'dev'), params_path='data/res_speech-0.1-1-6.947075576741569')
+        model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss)
+        model.value(aishell.train_datas(1, 'dev'), params_path='data/deep_speech2-0.01-0-2.776363663250308')
     elif parse == 'test':
         root = '/share/datasets/data_aishell'
         aishell = datasets.Aishell(root)
