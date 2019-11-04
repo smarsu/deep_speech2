@@ -82,6 +82,13 @@ class DeepSpeech2(torch.nn.Module):
         self.fc = torch.nn.Linear(2 * 1280, self.vocab_size)
         self.ctc_loss = torch.nn.CTCLoss()
 
+
+    def calc_t_length(self, t):
+        t = (t - 5) // 4 + 1
+        t = (t - 5) // 2 + 1
+        t = (t - 5) // 2 + 1
+        return t
+
     
     def forward(self, x):
         x = self.convblock(x)
