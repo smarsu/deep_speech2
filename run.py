@@ -35,4 +35,4 @@ if __name__ == '__main__':
         net = deep_speech2.DeepSpeech2(201, 4231)
         # net = shallow_speech.ShallowSpeech()
         model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss)
-        model.test(wav_path='test.wav', params_path='data/deep_speech2-0.01-0-2.306673367055867', id2word=aishell.id2word)
+        model.test(wav_path='test.wav', params_path='data/deep_speech2-0.01-4-2.2494239925925266', id2word=aishell.id2word)
