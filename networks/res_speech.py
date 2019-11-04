@@ -247,13 +247,13 @@ class ResSpeech(torch.nn.Module):
         self.resnet = resnet18()
 
         self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion,
-                                hidden_size=256,
+                                hidden_size=1024,
                                 num_layers=1,
                                 batch_first=True,
                                 dropout=0,
                                 bidirectional=True)
 
-        self.fc = torch.nn.Linear(2 * 256, 4231)
+        self.fc = torch.nn.Linear(2 * 1024, 4231)
 
     
     def calc_t_length(self, t):
