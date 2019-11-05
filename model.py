@@ -183,7 +183,7 @@ class SpeechRecognitionModel(object):
 
                 t2 = time.time()
 
-                # print(data)
+                print(data)
 
                 input = torch.from_numpy(data).cuda()
                 
