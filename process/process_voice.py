@@ -253,6 +253,12 @@ def get_frequency_feature(wavsignal, framerate, time_window=25, time_stride=10):
     return windows
 
 
+def norm(x):
+    x = x - np.mean(x)
+    x = x / np.sqrt(np.var(x) + 1e-12)
+    return x
+
+
 if __name__ == '__main__':
     while True:
         wavsignal, framerate = read_wav('/share/datasets/data_aishell/wav/train/S0002/BAC009S0002W0388.wav')

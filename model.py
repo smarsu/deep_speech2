@@ -47,6 +47,7 @@ class SpeechRecognitionModel(object):
         for wav_path in wav_paths:
             wavsignal, framerate = process_voice.read_wav_v2(wav_path)
             windows = process_voice.get_frequency_feature_v2(wavsignal, framerate)
+            windows = process_voice.norm(windows)
             max_window_size = max(max_window_size, windows.shape[0])
             minibatch_windows.append(windows)
             # window_sizes.append(deep_speech2.calc_downsampled_t_length(windows.shape[0]))
