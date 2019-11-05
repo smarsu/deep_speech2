@@ -257,7 +257,7 @@ class ResSpeech(torch.nn.Module):
         #                                  out_channels=3,
         #                                  kernel_size=[1, 16 * window_size],  # 16 for 16kHz
         #                                  stride=[1, 16 * stride_size])  # input: [batch_size, time, freq, 1]
-        self.resnet = resnet50()
+        self.resnet = resnet18()
 
         # self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion,
         #                         hidden_size=256,
