@@ -254,8 +254,8 @@ def get_frequency_feature(wavsignal, framerate, time_window=25, time_stride=10):
 
 
 def norm(x):
-    x = x - np.mean(x)
-    x = x / np.sqrt(np.var(x) + 1e-12)
+    x = x - np.mean(x, -1, keepdims=True)
+    x = x / np.sqrt(np.var(x, -1, keepdims=True) + 1e-12)
     return x
 
 
