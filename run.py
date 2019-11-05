@@ -16,12 +16,12 @@ if __name__ == '__main__':
     if parse == 'train': 
         root = '/share/datasets/data_aishell'
         aishell = datasets.Aishell(root)
-        # net = deep_speech2.DeepSpeech2(201, 4231)
-        net = res_speech.ResSpeech()
+        net = deep_speech2.DeepSpeech2(201, 4231)
+        # net = res_speech.ResSpeech()
         # net = shallow_speech.ShallowSpeech()
         model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss, model_name='res_speech')
-        model.train(aishell, epoch=1000000, batch_size=32, lr=0.1, momentum=0.9, weight_decay=0., params_path=None)
-        # model.train(aishell, epoch=1000000, batch_size=32, lr=0.01, weight_decay=0., params_path='data/deep_speech2-0.01-2-2.339809679362477')  # 18
+        # model.train(aishell, epoch=1000000, batch_size=32, lr=0.1, momentum=0.9, weight_decay=0., params_path=None)
+        model.train(aishell, epoch=1000000, batch_size=32, lr=0.01, weight_decay=0., params_path='data/deep_speech2-0.01-2-2.339809679362477')  # 18
         # model.train(aishell, epoch=1000000, batch_size=32, lr=0.1 / 32, momentum=0., weight_decay=0., params_path=None)
     elif parse == 'value':
         root = '/share/datasets/data_aishell'
