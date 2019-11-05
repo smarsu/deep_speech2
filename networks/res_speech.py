@@ -244,16 +244,16 @@ class ResSpeech(torch.nn.Module):
         #                                  out_channels=3,
         #                                  kernel_size=[1, 16 * window_size],  # 16 for 16kHz
         #                                  stride=[1, 16 * stride_size])  # input: [batch_size, time, freq, 1]
-        self.resnet = resnet18()
+        self.resnet = resnet50()
 
-        self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion,
-                                hidden_size=256,
-                                num_layers=1,
-                                batch_first=True,
-                                dropout=0,
-                                bidirectional=True)
+        # self.gru = torch.nn.GRU(input_size=512 * self.resnet.block.expansion,
+        #                         hidden_size=256,
+        #                         num_layers=1,
+        #                         batch_first=True,
+        #                         dropout=0,
+        #                         bidirectional=True)
 
-        self.fc = torch.nn.Linear(2 * 256, 4231)
+        self.fc = torch.nn.Linear(512 * self.resnet.block.expansion, 4231)
 
     
     def calc_t_length(self, t):
@@ -267,7 +267,7 @@ class ResSpeech(torch.nn.Module):
         x = torch.mean(x, -1)  # use mean for not compute
         x = x.permute([0, 2, 1])
 
-        x = self.gru(x)
+        # x = self.gru(x)
         x = self.fc(x[0])
 
         return x
