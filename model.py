@@ -140,9 +140,9 @@ class SpeechRecognitionModel(object):
             weight_decay: float
         """
         self.model = self.model.train()
-        optimizer = torch.optim.SGD(self.model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
-        # optimizer = torch.optim.Adam(self.model.parameters())
-        ctc_loss = torch.nn.CTCLoss(reduction='mean')
+        # optimizer = torch.optim.SGD(self.model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
+        optimizer = torch.optim.Adam(self.model.parameters())
+        ctc_loss = torch.nn.CTCLoss(reduction='sum')
 
         if params_path:
             self.model.load_state_dict(torch.load(params_path))
