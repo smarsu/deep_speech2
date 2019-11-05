@@ -263,7 +263,7 @@ class ResSpeech(torch.nn.Module):
                                 hidden_size=256,
                                 num_layers=7,
                                 batch_first=True,
-                                dropout=0,
+                                dropout=0.5,
                                 bidirectional=True)
 
         self.fc = torch.nn.Linear(256 * 2, 4231)
