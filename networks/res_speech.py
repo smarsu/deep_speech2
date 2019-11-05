@@ -279,7 +279,8 @@ class ResSpeech(torch.nn.Module):
         x = x.permute([0, 2, 1])
 
         # x = self.gru(x)
-        x = self.fc(x[0])
+        # x = self.fc(x[0])
+        x = self.fc(x)
 
         return x
 
