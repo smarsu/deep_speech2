@@ -1,62 +1,82 @@
 import torch
+import math
 
 
 class ShallowSpeech(torch.nn.Module):
-    def __init__(self, freq_size=201):
+    def __init__(self, 
+                 c_in=832,
+                 c1=832,
+                 c2=832,
+                 c3=832,
+                 co=404):
         super().__init__()
 
-        self.firstconv = torch.nn.Conv2d(in_channels=1,
-                                    out_channels=32,
-                                    kernel_size=[5, 5],
-                                    stride=[4, 4])
+        self.conv1 = torch.nn.Conv2d(in_channels=c_in, 
+                                     out_channels=c1, 
+                                     kernel_size=(3, 1), 
+                                     stride=1, 
+                                     padding=0, 
+                                     dilation=1, 
+                                     groups=1, 
+                                     bias=True)
+        self.maxpool1 = torch.nn.MaxPool2d(kernel_size=(2, 1), 
+                                           stride=(2, 1), 
+                                           padding=0, 
+                                           dilation=1, 
+                                           return_indices=False, 
+                                           ceil_mode=True)  # ceil nor floor
+        self.conv2 = torch.nn.Conv2d(in_channels=c1, 
+                                     out_channels=c2, 
+                                     kernel_size=(3, 1), 
+                                     stride=1, 
+                                     padding=0, 
+                                     dilation=1, 
+                                     groups=1, 
+                                     bias=True)
+        self.conv3 = torch.nn.Conv2d(in_channels=c2, 
+                                     out_channels=c3, 
+                                     kernel_size=(3, 1), 
+                                     stride=1, 
+                                     padding=0, 
+                                     dilation=1, 
+                                     groups=1, 
+                                     bias=True)
+        self.conv4 = torch.nn.Conv2d(in_channels=c3, 
+                                     out_channels=co, 
+                                     kernel_size=(1, 1), 
+                                     stride=1, 
+                                     padding=0, 
+                                     dilation=1, 
+                                     groups=1, 
+                                     bias=True)
+        
 
-        self.conv = torch.nn.Conv2d(in_channels=32,
-                                    out_channels=32,
-                                    kernel_size=[3, 3],
-                                    stride=[2, 2])
-        self.batch_norm = torch.nn.BatchNorm2d(num_features=32)
-
-        self.gru = torch.nn.GRU(input_size=32*self.calc_t_length(freq_size),
-                                hidden_size=1024,
-                                num_layers=1,
-                                batch_first=True,
-                                dropout=0,
-                                bidirectional=True)
-
-        self.fc = torch.nn.Linear(2 * 1024, 4231)
-
-    
     def calc_t_length(self, t):
-        t = (t - 4 - 1) // 4 + 1
-        for _ in range(2):
-            t = (t - 2 - 1) // 2 + 1
+        t = t - 2  # conv1
+        t = math.ceil(t / 2)  # pool1
+        t = t - 2  # conv2
+        t = t - 2  # conv3
         return t
 
 
     def forward(self, x):
-        # x = x.permute([0, 3, 1, 2])
-
-        x = self.firstconv(x)
-        x = self.batch_norm(x)
+        x = self.conv1(x)
         x = torch.relu(x)
-        for _ in range(2):
-            x = self.conv(x)
-            x = self.batch_norm(x)
-            x = torch.relu(x)
 
-        batch, feat, time, freq = list(x.shape)
-        # x = torch.squeeze(x, 2)  # [32, 92 * 2, 16000 * 10 * 2 // 96 // 2]
-        x = x.permute([0, 2, 1, 3])
-        x = x.reshape(batch, time, feat * freq)
+        x = self.maxpool1(x)
 
-        x = self.gru(x)
-        x = self.fc(x[0])
+        x = self.conv2(x)
+        x = torch.relu(x)
+
+        x = self.conv3(x)
+        x = torch.relu(x)
+
+        x = self.conv4(x)   # [n, c, t, 1]
+
+        x = x[:, :, :, 0]
+        x = x.permute([0, 2, 1])
         return x
 
 
 if __name__ == '__main__':
-    shallow_speech = ShallowSpeech().cuda()
-    while True:
-        x = torch.rand(32, 1, 16000 * 10 * 2 // 96 // 2, 96 * 2).cuda()
-        x = shallow_speech(x)
-        print(x.cpu().detach().numpy().shape)
+    pass

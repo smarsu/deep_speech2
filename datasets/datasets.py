@@ -6,6 +6,7 @@ import os
 import os.path as osp
 import glog
 import numpy as np
+from pypinyin import lazy_pinyin
 
 os.environ['PYTHONIOENCODING'] = 'utf-8'
 
@@ -109,6 +110,39 @@ class Dataset(object):
 
         return datas
 
+    
+    def analysis_data(self, datas, limit_size=1000):
+        """
+        Args:   
+            datas: ndarray, shape [n, batch_size, 2]
+        """
+        import sys
+        sys.path.append('..')
+        from process import process_voice
+
+        datas = datas.reshape(-1, 2)
+        datas = datas[:limit_size]
+
+        rates = []
+        voices = []
+        for x, y in datas:
+            frames, framerate = process_voice.read_wav(x)
+            rate = frames.shape[1] / len(y)
+            print(x)
+            print(y)
+            print(rate)
+
+            rates.append(rate)
+            voices.extend(frames[0])  # for channel 0
+
+        print(np.min(rates))  # 3467.3571428571427
+        print(np.max(rates))  # 8312.0
+        print(np.mean(rates))  # 5061.607349704357
+
+        print(np.mean(voices))  # -0.513840552309048
+        print(np.var(voices))  # 769822.5437618316
+        print(np.array(voices).shape)  # (72061539,)
+
 
 class Aishell(Dataset):
     """aishell speech recoginition dataset."""
@@ -178,6 +212,7 @@ class Aishell(Dataset):
                 line = line.strip().split()
                 voice_name = line[0]
                 words = ''.join(line[1:])  # No need for seg words.
+                words = lazy_pinyin(words)
                 name2word[voice_name] = words
         return name2word
 
@@ -249,6 +284,7 @@ if __name__ == '__main__':
     aishell = Aishell(root)
     t1 = time.time()
     datas = aishell.train_datas(batch_size=batch_size)
+    aishell.analysis_data(datas)
     t2 = time.time()
     print(datas)
     print(datas.shape)

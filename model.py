@@ -46,6 +46,7 @@ class SpeechRecognitionModel(object):
         window_sizes = []
         for wav_path in wav_paths:
             wavsignal, framerate = process_voice.read_wav_v2(wav_path)
+            wavsignal = process_voice.norm(wavsignal)  # norm should before get_frequency_feature_v2
             windows = process_voice.get_frequency_feature_v2(wavsignal, framerate)
             max_window_size = max(max_window_size, windows.shape[0])
             minibatch_windows.append(windows)
@@ -59,7 +60,7 @@ class SpeechRecognitionModel(object):
         for i in range(len(wav_paths)):  # TODO: pad both side.
             minibatch_input[i:i+1, :len(minibatch_windows[i])] = minibatch_windows[i]
         
-        return minibatch_input[:, np.newaxis, ...], window_sizes
+        return minibatch_input[:, np.newaxis, ...].transpose(0, 3, 2, 1), window_sizes
 
 
     def _preprocess(self, wav_paths):
@@ -157,7 +158,7 @@ class SpeechRecognitionModel(object):
                 t1 = time.time()
                 assert data_tuple.shape == (batch_size, 2)
                 data = data_tuple[:, 0]
-                data, window_sizes = self._preprocess(data)
+                data, window_sizes = self._preprocess_v2(data)
                 label = data_tuple[:, 1]
                 input_lengths = torch.from_numpy(np.array(window_sizes, dtype=np.int32))
                 # print(window_sizes)
@@ -183,7 +184,7 @@ class SpeechRecognitionModel(object):
 
                 t2 = time.time()
 
-                # print(data)
+                print(data.shape)
 
                 input = torch.from_numpy(data).cuda()
                 
@@ -215,6 +216,8 @@ class SpeechRecognitionModel(object):
                                             str(step), 
                                             str(running_loss / (idx + 1))]))
 
+            # self.value(dataset.train_datas(batch_size, 'dev', limited_data_size=1000), params_path=None)
+
 
     def value(self, data_tuples, params_path):
         """Value the performance on dev datasets.
@@ -223,7 +226,8 @@ class SpeechRecognitionModel(object):
             data_tuples: list of tuple, shape [N, b, 2], [(data, label), ...].
         """
         self.model = self.model.eval()
-        self.model.load_state_dict(torch.load(params_path))
+        if params_path:
+            self.model.load_state_dict(torch.load(params_path))
 
         preds = []
         labels = []

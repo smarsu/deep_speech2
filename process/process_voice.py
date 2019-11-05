@@ -117,16 +117,16 @@ def read_wav_v2(wav_path):
         #         framerate, nframes))
         wav = fb.readframes(nframes)
 
-        # if sampwidth == 1:
-        #     dtype = np.int8
-        # elif sampwidth == 2:
-        #     dtype = np.int16
-        # else:
-        #     raise ValueError('The supported sampwidth in wav is 1 or 2, '
-        #                         'get {}'.format(sampwidth))
+        if sampwidth == 1:
+            dtype = np.int8
+        elif sampwidth == 2:
+            dtype = np.int16
+        else:
+            raise ValueError('The supported sampwidth in wav is 1 or 2, '
+                                'get {}'.format(sampwidth))
 
-        frames = np.frombuffer(wav, dtype=np.int8)
-        frames = frames.reshape(nframes * sampwidth, nchannels).T
+        frames = np.frombuffer(wav, dtype=dtype)  # Can here be int8 for norm?
+        frames = frames.reshape(nframes, nchannels).T
 
         return frames, framerate
 
@@ -184,7 +184,8 @@ def read_wav(wav_path):
     return frames, framerate
 
 
-def get_frequency_feature_v2(wavsignal, framerate, feat_size=96 * 2):
+def get_frequency_feature_v2(wavsignal, framerate, feat_size=832):
+    """Norm should be get feature."""
     wavsignal = wavsignal[0]
     size = (len(wavsignal) + feat_size - 1) // feat_size * feat_size
     zeros = np.zeros(shape=[size,])
@@ -244,8 +245,8 @@ def get_frequency_feature(wavsignal, framerate, time_window=25, time_stride=10):
         window = window[:window_size//2+1]  # As the fft data is symmetrical, just choose half.
 
         # window = np.abs(window) / wav_length  # TODO: Why divide wav_length
-        # window = np.abs(window) / 700
-        window = np.abs(window)
+        window = np.abs(window) / 700
+        # window = np.abs(window)
         window = np.log(window + 1)  # Will the hardware work well with the feature size (201)?
 
         windows.append(window)
@@ -254,9 +255,14 @@ def get_frequency_feature(wavsignal, framerate, time_window=25, time_stride=10):
     return windows
 
 
-def norm(x):
-    x = x - np.mean(x, -1, keepdims=True)
-    x = x / np.sqrt(np.var(x, -1, keepdims=True) + 1e-12)
+def norm(x, mean=-0.513840552309048, var=769822.5437618316, eps=1e-6):
+    if mean is None:
+        mean = np.mean(x)
+    if var is None:
+        var = np.var(x)
+
+    x = x - mean
+    x = x / np.sqrt(var + eps)
     return x
 
 
