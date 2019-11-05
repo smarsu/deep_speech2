@@ -130,7 +130,7 @@ class SpeechRecognitionModel(object):
         return labels, lengths
 
     
-    def train(self, dataset, epoch, batch_size, lr=0.1, momentum=0.9, weight_decay=5e-4, params_path=None):
+    def train(self, dataset, epoch, batch_size, lr=0.1, momentum=0.9, weight_decay=1e-6, params_path=None):
         """
         Args:
             dataser: The object of Dataset. We use the train_datas function 
