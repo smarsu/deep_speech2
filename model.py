@@ -234,7 +234,7 @@ class SpeechRecognitionModel(object):
         for data_tuple in data_tuples:
             data = data_tuple[:, 0]
             label = data_tuple[:, 1]
-            data, _ = self._preprocess(data)
+            data, _ = self._preprocess_v2(data)
             # data = data / 127
             print(data.shape)
             predict = self.model(torch.from_numpy(data)).cpu().detach().numpy()
