@@ -27,10 +27,10 @@ if __name__ == '__main__':
     elif parse == 'value':
         root = '/share/datasets/data_aishell'
         aishell = datasets.Aishell(root)
-        net = deep_speech2.DeepSpeech2(201, 4231)
-        # net = shallow_speech.ShallowSpeech()
-        model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss)
-        model.value(aishell.train_datas(1, 'dev'), params_path='data/deep_speech2-0.01-4-2.2333707728450722')
+        # net = deep_speech2.DeepSpeech2(201, 4231)
+        net = shallow_speech.ShallowSpeech()
+        model = model.SpeechRecognitionModel(net, deep_speech2.ctc_loss, device='cpu')
+        model.value(aishell.train_datas(1, 'dev')[:100], params_path='data/shallow_speech-0.1-21-4.661327694690358')
     elif parse == 'test':
         root = '/share/datasets/data_aishell'
         aishell = datasets.Aishell(root)

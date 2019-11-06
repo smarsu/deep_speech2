@@ -24,7 +24,7 @@ class SpeechRecognitionModel(object):
         if device == 'gpu':
             self.model = model.cuda()
         elif device == 'cpu':
-            self.model = model.cpu()
+            self.model = model
         # self.criterion = criterion
         self._model_name = model_name
         pass
@@ -225,7 +225,7 @@ class SpeechRecognitionModel(object):
         Args:
             data_tuples: list of tuple, shape [N, b, 2], [(data, label), ...].
         """
-        self.model = self.model.eval()
+        self.model = self.model.eval().cpu()
         if params_path:
             self.model.load_state_dict(torch.load(params_path))
 
@@ -237,7 +237,7 @@ class SpeechRecognitionModel(object):
             data, _ = self._preprocess(data)
             # data = data / 127
             print(data.shape)
-            predict = self.model(torch.from_numpy(data).cuda()).cpu().detach().numpy()
+            predict = self.model(torch.from_numpy(data)).cpu().detach().numpy()
             sequence = self._postprocess(predict)
             preds.extend(sequence)
             labels.extend(label)
