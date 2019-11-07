@@ -52,9 +52,9 @@ class ShallowSpeech(torch.nn.Module):
         #                              bias=True)
         self.lstm = torch.nn.LSTM(input_size=c3,
                                   hidden_size=crnn,
-                                  num_layers=2,
+                                  num_layers=1,
                                   batch_first=True,
-                                  dropout=0.5,  # god dropout
+                                  dropout=0,  # god dropout
                                   bidirectional=True)
         self.fc = torch.nn.Linear(crnn * 2, co)
         
