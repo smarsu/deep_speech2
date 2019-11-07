@@ -76,7 +76,7 @@ class SpeechRecognitionModel(object):
         window_sizes = []
         for wav_path in wav_paths:
             wavsignal, framerate = process_voice.read_wav(wav_path)
-            windows = process_voice.get_frequency_feature(wavsignal, framerate, time_stride=10)
+            windows = process_voice.get_frequency_feature(wavsignal, framerate, time_window=52, time_stride=52)
             # windows = process_voice.norm(windows)
             max_window_size = max(max_window_size, windows.shape[0])
             minibatch_windows.append(windows)
@@ -158,7 +158,7 @@ class SpeechRecognitionModel(object):
                 t1 = time.time()
                 assert data_tuple.shape == (batch_size, 2)
                 data = data_tuple[:, 0]
-                data, window_sizes = self._preprocess_v2(data)
+                data, window_sizes = self._preprocess(data)
                 label = data_tuple[:, 1]
                 input_lengths = torch.from_numpy(np.array(window_sizes, dtype=np.int32))
                 # print(window_sizes)
@@ -234,7 +234,7 @@ class SpeechRecognitionModel(object):
         for data_tuple in data_tuples:
             data = data_tuple[:, 0]
             label = data_tuple[:, 1]
-            data, _ = self._preprocess_v2(data)
+            data, _ = self._preprocess(data)
             # data = data / 127
             print(data.shape)
             predict = self.model(torch.from_numpy(data)).cpu().detach().numpy()
