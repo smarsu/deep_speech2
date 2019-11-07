@@ -4,10 +4,10 @@ import math
 
 class ShallowSpeech(torch.nn.Module):
     def __init__(self, 
-                 c_in=832,
-                 c1=832,
-                 c2=832,
-                 c3=832,
+                 c_in=417,
+                 c1=512,
+                 c2=1024,
+                 c3=2048,
                  crnn=1024,
                  co=404):
         super().__init__()
@@ -52,7 +52,7 @@ class ShallowSpeech(torch.nn.Module):
         #                              bias=True)
         self.lstm = torch.nn.LSTM(input_size=c3,
                                   hidden_size=crnn,
-                                  num_layers=1,
+                                  num_layers=2,
                                   batch_first=True,
                                   dropout=0,  # god dropout
                                   bidirectional=True)
