@@ -8,6 +8,7 @@ class ShallowSpeech(torch.nn.Module):
                  c1=832,
                  c2=832,
                  c3=832,
+                 crnn=1024,
                  co=404):
         super().__init__()
 
@@ -41,14 +42,21 @@ class ShallowSpeech(torch.nn.Module):
                                      dilation=1, 
                                      groups=1, 
                                      bias=True)
-        self.conv4 = torch.nn.Conv2d(in_channels=c3, 
-                                     out_channels=co, 
-                                     kernel_size=(1, 1), 
-                                     stride=1, 
-                                     padding=0, 
-                                     dilation=1, 
-                                     groups=1, 
-                                     bias=True)
+        # self.conv4 = torch.nn.Conv2d(in_channels=c3, 
+        #                              out_channels=co, 
+        #                              kernel_size=(1, 1), 
+        #                              stride=1, 
+        #                              padding=0, 
+        #                              dilation=1, 
+        #                              groups=1, 
+        #                              bias=True)
+        self.lstm = torch.nn.LSTM(input_size=c3,
+                                  hidden_size=crnn,
+                                  num_layers=2,
+                                  batch_first=True,
+                                  dropout=0.5,  # god dropout
+                                  bidirectional=True)
+        self.fc = torch.nn.Linear(crnn * 2, co)
         
 
     def calc_t_length(self, t):
@@ -71,10 +79,16 @@ class ShallowSpeech(torch.nn.Module):
         x = self.conv3(x)
         x = torch.relu(x)
 
-        x = self.conv4(x)   # [n, c, t, 1]
+        # x = self.conv4(x)   # [n, c, t, 1]
+
+        # x = x[:, :, :, 0]
+        # x = x.permute([0, 2, 1])
 
         x = x[:, :, :, 0]
         x = x.permute([0, 2, 1])
+
+        x = self.lstm(x)
+        x = self.fc(x[0])
         return x
 
 
