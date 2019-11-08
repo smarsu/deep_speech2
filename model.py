@@ -190,7 +190,7 @@ class SpeechRecognitionModel(object):
                 
                 predict = self.model(input)
                 predict = predict.permute(1, 0, 2)
-                predict = predict.log_softmax(2)
+                # predict = predict.log_softmax(2)
                 loss = ctc_loss(predict, 
                                 torch.from_numpy(np.array(label)).cuda(), 
                                 input_lengths.cuda(), 
