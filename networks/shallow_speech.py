@@ -5,16 +5,16 @@ import math
 class ShallowSpeech(torch.nn.Module):
     def __init__(self, 
                  c_in=417,
-                #  c1=256,
-                #  c2=512,
-                #  c3=1024,
-                #  crnn=512,
-                #  co=404):
-                 c1=512,
-                 c2=1024,
-                 c3=2048,
-                 crnn=1024,
+                 c1=256,
+                 c2=512,
+                 c3=1024,
+                 crnn=512,
                  co=404):
+                #  c1=512,
+                #  c2=1024,
+                #  c3=2048,
+                #  crnn=1024,
+                #  co=404):
         super().__init__()
 
         self.conv1 = torch.nn.Conv2d(in_channels=c_in, 
@@ -57,7 +57,7 @@ class ShallowSpeech(torch.nn.Module):
         #                              bias=True)
         self.lstm = torch.nn.LSTM(input_size=c3,
                                   hidden_size=crnn,
-                                  num_layers=2,
+                                  num_layers=7,
                                   batch_first=True,
                                   dropout=0,  # god dropout
                                   bidirectional=True)
