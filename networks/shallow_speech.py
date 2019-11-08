@@ -5,10 +5,15 @@ import math
 class ShallowSpeech(torch.nn.Module):
     def __init__(self, 
                  c_in=417,
-                 c1=256,
-                 c2=512,
-                 c3=1024,
-                 crnn=512,
+                #  c1=256,
+                #  c2=512,
+                #  c3=1024,
+                #  crnn=512,
+                #  co=404):
+                 c1=512,
+                 c2=1024,
+                 c3=2048,
+                 crnn=1024,
                  co=404):
         super().__init__()
 
