@@ -4,31 +4,38 @@ import math
 
 class ShallowSpeech(torch.nn.Module):
     def __init__(self, 
-                 c_in=417,
-                 c1=256,
-                 c2=512,
-                 c3=1024,
+                #  c_in=417,
+                #  c1=256,
+                #  c2=512,
+                #  c3=1024,
+                #  crnn=512,
+                #  co=404):
+                 f=417,
+                 c_in=1,
+                 c1=32,
+                 c2=32,
+                 c3=64,
                  crnn=512,
-                 co=404):
+                 co=404)
         super().__init__()
 
         self.conv1 = torch.nn.Conv2d(in_channels=c_in, 
                                      out_channels=c1, 
-                                     kernel_size=(3, 1), 
+                                     kernel_size=(3, 81), 
                                      stride=1, 
                                      padding=0, 
                                      dilation=1, 
                                      groups=1, 
                                      bias=True)
-        self.maxpool1 = torch.nn.MaxPool2d(kernel_size=(2, 1), 
-                                           stride=(2, 1), 
+        self.maxpool1 = torch.nn.MaxPool2d(kernel_size=(2, 2), 
+                                           stride=(2, 2), 
                                            padding=0, 
                                            dilation=1, 
                                            return_indices=False, 
                                            ceil_mode=True)  # ceil nor floor
         self.conv2 = torch.nn.Conv2d(in_channels=c1, 
                                      out_channels=c2, 
-                                     kernel_size=(3, 1), 
+                                     kernel_size=(3, 41), 
                                      stride=1, 
                                      padding=0, 
                                      dilation=1, 
@@ -36,7 +43,7 @@ class ShallowSpeech(torch.nn.Module):
                                      bias=True)
         self.conv3 = torch.nn.Conv2d(in_channels=c2, 
                                      out_channels=c3, 
-                                     kernel_size=(3, 1), 
+                                     kernel_size=(3, 41), 
                                      stride=1, 
                                      padding=0, 
                                      dilation=1, 
@@ -50,11 +57,11 @@ class ShallowSpeech(torch.nn.Module):
         #                              dilation=1, 
         #                              groups=1, 
         #                              bias=True)
-        self.lstm = torch.nn.LSTM(input_size=c3,
+        self.lstm = torch.nn.LSTM(input_size=c3 * self.calc_f_length(f),
                                   hidden_size=crnn,
-                                  num_layers=2,
+                                  num_layers=7,
                                   batch_first=True,
-                                  dropout=0,  # god dropout
+                                  dropout=0.5,  # god dropout
                                   bidirectional=True)
         self.fc = torch.nn.Linear(crnn * 2, co)
         
@@ -65,6 +72,14 @@ class ShallowSpeech(torch.nn.Module):
         t = t - 2  # conv2
         t = t - 2  # conv3
         return t
+
+    
+    def calc_f_length(self, f):
+        f = f - 80
+        f = math.ceil(f / 2)
+        f = f - 40
+        f = f - 40
+        return f
 
 
     def forward(self, x):
@@ -84,8 +99,12 @@ class ShallowSpeech(torch.nn.Module):
         # x = x[:, :, :, 0]
         # x = x.permute([0, 2, 1])
 
-        x = x[:, :, :, 0]
-        x = x.permute([0, 2, 1])
+        # x = x[:, :, :, 0]
+        # x = x.permute([0, 2, 1])
+
+        x = x.permute([0, 2, 1, 3])
+        n, t, c, f = list(x.shape)
+        x = x.reshape([n, t, c * f])
 
         x = self.lstm(x)
         x = self.fc(x[0])

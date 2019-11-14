@@ -88,7 +88,8 @@ class SpeechRecognitionModel(object):
         for i in range(len(wav_paths)):  # TODO: pad both side.
             minibatch_input[i:i+1, :len(minibatch_windows[i])] = minibatch_windows[i]
         
-        return minibatch_input[:, np.newaxis, ...].transpose(0, 3, 2, 1), window_sizes
+        # return minibatch_input[:, np.newaxis, ...].transpose(0, 3, 2, 1), window_sizes
+        return minibatch_input[:, np.newaxis, ...], window_sizes
 
 
     def _postprocess_per_batch(self, predict):
